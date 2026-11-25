@@ -30,3 +30,6 @@ docs/
 
 # PWA dev output
 dev-dist
+
+# Song build cache
+scripts/.cache.json

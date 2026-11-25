@@ -1,0 +1,3098 @@
+[
+ {
+  "id": "elvis-presley-heartbreak-hotel",
+  "deezerId": 7675085,
+  "artist": "Elvis Presley",
+  "title": "Heartbreak Hotel",
+  "year": 1956,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "elvis-presley-jailhouse-rock",
+  "deezerId": 6596867,
+  "artist": "Elvis Presley",
+  "title": "Jailhouse Rock",
+  "year": 1957,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "chuck-berry-johnny-b-goode",
+  "deezerId": 2689636,
+  "artist": "Chuck Berry",
+  "title": "Johnny B. Goode",
+  "year": 1958,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bill-haley-his-comets-rock-around-the-clock",
+  "deezerId": 1749949,
+  "artist": "Bill Haley & His Comets",
+  "title": "Rock Around the Clock",
+  "year": 1954,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "little-richard-tutti-frutti",
+  "deezerId": 2203627,
+  "artist": "Little Richard",
+  "title": "Tutti Frutti",
+  "year": 1955,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "buddy-holly-peggy-sue",
+  "deezerId": 4002674,
+  "artist": "Buddy Holly",
+  "title": "Peggy Sue",
+  "year": 1957,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "jerry-lee-lewis-great-balls-of-fire",
+  "deezerId": 105121570,
+  "artist": "Jerry Lee Lewis",
+  "title": "Great Balls of Fire",
+  "year": 1957,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "ritchie-valens-la-bamba",
+  "deezerId": 104816990,
+  "artist": "Ritchie Valens",
+  "title": "La Bamba",
+  "year": 1958,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "ray-charles-what-d-i-say",
+  "deezerId": 1903233,
+  "artist": "Ray Charles",
+  "title": "What'd I Say",
+  "year": 1959,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-everly-brothers-wake-up-little-susie",
+  "deezerId": 691215,
+  "artist": "The Everly Brothers",
+  "title": "Wake Up Little Susie",
+  "year": 1957,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "paul-anka-diana",
+  "deezerId": 964938,
+  "artist": "Paul Anka",
+  "title": "Diana",
+  "year": 1957,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "frank-sinatra-come-fly-with-me",
+  "deezerId": 71483060,
+  "artist": "Frank Sinatra",
+  "title": "Come Fly with Me",
+  "year": 1958,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "dean-martin-that-s-amore",
+  "deezerId": 3435056,
+  "artist": "Dean Martin",
+  "title": "That's Amore",
+  "year": 1953,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "domenico-modugno-nel-blu-dipinto-di-blu",
+  "deezerId": 10180259,
+  "artist": "Domenico Modugno",
+  "title": "Nel blu dipinto di blu",
+  "year": 1958,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bobby-darin-mack-the-knife",
+  "deezerId": 691342,
+  "artist": "Bobby Darin",
+  "title": "Mack the Knife",
+  "year": 1959,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "fats-domino-blueberry-hill",
+  "deezerId": 3092103,
+  "artist": "Fats Domino",
+  "title": "Blueberry Hill",
+  "year": 1956,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-platters-only-you",
+  "deezerId": 6171815,
+  "artist": "The Platters",
+  "title": "Only You",
+  "year": 1955,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "eddie-cochran-summertime-blues",
+  "deezerId": 3089528,
+  "artist": "Eddie Cochran",
+  "title": "Summertime Blues",
+  "year": 1958,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "ivo-robic-morgen",
+  "deezerId": 798980922,
+  "artist": "Ivo Robić",
+  "title": "Morgen",
+  "year": 1959,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-beatles-she-loves-you",
+  "deezerId": 116348596,
+  "artist": "The Beatles",
+  "title": "She Loves You",
+  "year": 1963,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-beatles-yesterday",
+  "deezerId": 116348612,
+  "artist": "The Beatles",
+  "title": "Yesterday",
+  "year": 1965,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-beatles-hey-jude",
+  "deezerId": 116348632,
+  "artist": "The Beatles",
+  "title": "Hey Jude",
+  "year": 1968,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-rolling-stones-i-can-t-get-no-satisfaction",
+  "deezerId": 7677778,
+  "artist": "The Rolling Stones",
+  "title": "(I Can't Get No) Satisfaction",
+  "year": 1965,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-rolling-stones-paint-it-black",
+  "deezerId": 7818900,
+  "artist": "The Rolling Stones",
+  "title": "Paint It Black",
+  "year": 1966,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-beach-boys-good-vibrations",
+  "deezerId": 3091992,
+  "artist": "The Beach Boys",
+  "title": "Good Vibrations",
+  "year": 1966,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-kinks-you-really-got-me",
+  "deezerId": 2319655705,
+  "artist": "The Kinks",
+  "title": "You Really Got Me",
+  "year": 1964,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-animals-the-house-of-the-rising-sun",
+  "deezerId": 3155135,
+  "artist": "The Animals",
+  "title": "The House of the Rising Sun",
+  "year": 1964,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bob-dylan-like-a-rolling-stone",
+  "deezerId": 14477354,
+  "artist": "Bob Dylan",
+  "title": "Like a Rolling Stone",
+  "year": 1965,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "simon-garfunkel-mrs-robinson",
+  "deezerId": 16148946,
+  "artist": "Simon & Garfunkel",
+  "title": "Mrs. Robinson",
+  "year": 1968,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-doors-light-my-fire",
+  "deezerId": 3614129,
+  "artist": "The Doors",
+  "title": "Light My Fire",
+  "year": 1967,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-jimi-hendrix-experience-purple-haze",
+  "deezerId": 4952885,
+  "artist": "The Jimi Hendrix Experience",
+  "title": "Purple Haze",
+  "year": 1967,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "aretha-franklin-respect",
+  "deezerId": 904732,
+  "artist": "Aretha Franklin",
+  "title": "Respect",
+  "year": 1967,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "otis-redding-sittin-on-the-dock-of-the-bay",
+  "deezerId": 495824392,
+  "artist": "Otis Redding",
+  "title": "(Sittin' On) The Dock of the Bay",
+  "year": 1968,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "marvin-gaye-i-heard-it-through-the-grapevine",
+  "deezerId": 132196486,
+  "artist": "Marvin Gaye",
+  "title": "I Heard It Through the Grapevine",
+  "year": 1968,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-supremes-baby-love",
+  "deezerId": 1182497,
+  "artist": "The Supremes",
+  "title": "Baby Love",
+  "year": 1964,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "ben-e-king-stand-by-me",
+  "deezerId": 136710424,
+  "artist": "Ben E. King",
+  "title": "Stand by Me",
+  "year": 1961,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "ray-charles-hit-the-road-jack",
+  "deezerId": 62882810,
+  "artist": "Ray Charles",
+  "title": "Hit the Road Jack",
+  "year": 1961,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "chubby-checker-the-twist",
+  "deezerId": 64638140,
+  "artist": "Chubby Checker",
+  "title": "The Twist",
+  "year": 1960,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "roy-orbison-oh-pretty-woman",
+  "deezerId": 78033230,
+  "artist": "Roy Orbison",
+  "title": "Oh, Pretty Woman",
+  "year": 1964,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-mamas-the-papas-california-dreamin",
+  "deezerId": 2321278,
+  "artist": "The Mamas & the Papas",
+  "title": "California Dreamin'",
+  "year": 1965,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "nancy-sinatra-these-boots-are-made-for-walkin",
+  "deezerId": 71323824,
+  "artist": "Nancy Sinatra",
+  "title": "These Boots Are Made for Walkin'",
+  "year": 1966,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "louis-armstrong-what-a-wonderful-world",
+  "deezerId": 906625,
+  "artist": "Louis Armstrong",
+  "title": "What a Wonderful World",
+  "year": 1967,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "frank-sinatra-strangers-in-the-night",
+  "deezerId": 71483069,
+  "artist": "Frank Sinatra",
+  "title": "Strangers in the Night",
+  "year": 1966,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-monkees-i-m-a-believer",
+  "deezerId": 764920,
+  "artist": "The Monkees",
+  "title": "I'm a Believer",
+  "year": 1966,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-turtles-happy-together",
+  "deezerId": 2043943,
+  "artist": "The Turtles",
+  "title": "Happy Together",
+  "year": 1967,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "procol-harum-a-whiter-shade-of-pale",
+  "deezerId": 109300764,
+  "artist": "Procol Harum",
+  "title": "A Whiter Shade of Pale",
+  "year": 1967,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-who-my-generation",
+  "deezerId": 136341550,
+  "artist": "The Who",
+  "title": "My Generation",
+  "year": 1965,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "creedence-clearwater-revival-proud-mary",
+  "deezerId": 883642,
+  "artist": "Creedence Clearwater Revival",
+  "title": "Proud Mary",
+  "year": 1969,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-temptations-my-girl",
+  "deezerId": 538643262,
+  "artist": "The Temptations",
+  "title": "My Girl",
+  "year": 1964,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "tom-jones-it-s-not-unusual",
+  "deezerId": 549298232,
+  "artist": "Tom Jones",
+  "title": "It's Not Unusual",
+  "year": 1965,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "elvis-presley-can-t-help-falling-in-love",
+  "deezerId": 551383,
+  "artist": "Elvis Presley",
+  "title": "Can't Help Falling in Love",
+  "year": 1961,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "james-brown-i-got-you-i-feel-good",
+  "deezerId": 907922,
+  "artist": "James Brown",
+  "title": "I Got You (I Feel Good)",
+  "year": 1965,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-zombies-she-s-not-there",
+  "deezerId": 757921442,
+  "artist": "The Zombies",
+  "title": "She's Not There",
+  "year": 1964,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "dusty-springfield-son-of-a-preacher-man",
+  "deezerId": 1104538,
+  "artist": "Dusty Springfield",
+  "title": "Son of a Preacher Man",
+  "year": 1968,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "scott-mckenzie-san-francisco-be-sure-to-wear-flowers-in-your-hair",
+  "deezerId": 869731,
+  "artist": "Scott McKenzie",
+  "title": "San Francisco (Be Sure to Wear Flowers in Your Hair)",
+  "year": 1967,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "jefferson-airplane-somebody-to-love",
+  "deezerId": 570650,
+  "artist": "Jefferson Airplane",
+  "title": "Somebody to Love",
+  "year": 1967,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-archies-sugar-sugar",
+  "deezerId": 1382508,
+  "artist": "The Archies",
+  "title": "Sugar, Sugar",
+  "year": 1969,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "david-bowie-space-oddity",
+  "deezerId": 107465566,
+  "artist": "David Bowie",
+  "title": "Space Oddity",
+  "year": 1969,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "lola-novakovic-ne-pali-svetla-u-sumrak",
+  "deezerId": 2999132301,
+  "artist": "Lola Novaković",
+  "title": "Ne pali svetla u sumrak",
+  "year": 1962,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "dubrovacki-trubaduri-jedan-dan",
+  "deezerId": 2994231951,
+  "artist": "Dubrovački trubaduri",
+  "title": "Jedan dan",
+  "year": 1968,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "oliver-dragojevic-picaferaj",
+  "deezerId": 3705570852,
+  "artist": "Oliver Dragojević",
+  "title": "Picaferaj",
+  "year": 1967,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "indexi-pruzam-ruke",
+  "deezerId": 3526231241,
+  "artist": "Indexi",
+  "title": "Pružam ruke",
+  "year": 1967,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "grupa-220-osmijeh",
+  "deezerId": 2995065231,
+  "artist": "Grupa 220",
+  "title": "Osmijeh",
+  "year": 1967,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "abba-waterloo",
+  "deezerId": 76376889,
+  "artist": "ABBA",
+  "title": "Waterloo",
+  "year": 1974,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "abba-mamma-mia",
+  "deezerId": 884030,
+  "artist": "ABBA",
+  "title": "Mamma Mia",
+  "year": 1975,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "abba-dancing-queen",
+  "deezerId": 884025,
+  "artist": "ABBA",
+  "title": "Dancing Queen",
+  "year": 1976,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "queen-bohemian-rhapsody",
+  "deezerId": 4091937401,
+  "artist": "Queen",
+  "title": "Bohemian Rhapsody",
+  "year": 1975,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "queen-we-will-rock-you",
+  "deezerId": 4092312801,
+  "artist": "Queen",
+  "title": "We Will Rock You",
+  "year": 1977,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "led-zeppelin-stairway-to-heaven",
+  "deezerId": 88003859,
+  "artist": "Led Zeppelin",
+  "title": "Stairway to Heaven",
+  "year": 1971,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "pink-floyd-another-brick-in-the-wall-pt-2",
+  "deezerId": 116914284,
+  "artist": "Pink Floyd",
+  "title": "Another Brick in the Wall, Pt. 2",
+  "year": 1979,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "eagles-hotel-california",
+  "deezerId": 426703682,
+  "artist": "Eagles",
+  "title": "Hotel California",
+  "year": 1976,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "fleetwood-mac-dreams",
+  "deezerId": 63480987,
+  "artist": "Fleetwood Mac",
+  "title": "Dreams",
+  "year": 1977,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bee-gees-stayin-alive",
+  "deezerId": 139138743,
+  "artist": "Bee Gees",
+  "title": "Stayin' Alive",
+  "year": 1977,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "gloria-gaynor-i-will-survive",
+  "deezerId": 975366,
+  "artist": "Gloria Gaynor",
+  "title": "I Will Survive",
+  "year": 1978,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "donna-summer-i-feel-love",
+  "deezerId": 1560033,
+  "artist": "Donna Summer",
+  "title": "I Feel Love",
+  "year": 1977,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "village-people-y-m-c-a",
+  "deezerId": 3809086042,
+  "artist": "Village People",
+  "title": "Y.M.C.A.",
+  "year": 1978,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "boney-m-daddy-cool",
+  "deezerId": 364951,
+  "artist": "Boney M.",
+  "title": "Daddy Cool",
+  "year": 1976,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "boney-m-rasputin",
+  "deezerId": 998635,
+  "artist": "Boney M.",
+  "title": "Rasputin",
+  "year": 1978,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "earth-wind-fire-september",
+  "deezerId": 487484142,
+  "artist": "Earth, Wind & Fire",
+  "title": "September",
+  "year": 1978,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "chic-le-freak",
+  "deezerId": 72060062,
+  "artist": "Chic",
+  "title": "Le Freak",
+  "year": 1978,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "david-bowie-heroes",
+  "deezerId": 461043312,
+  "artist": "David Bowie",
+  "title": "Heroes",
+  "year": 1977,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "elton-john-rocket-man",
+  "deezerId": 1144863,
+  "artist": "Elton John",
+  "title": "Rocket Man",
+  "year": 1972,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "lynyrd-skynyrd-sweet-home-alabama",
+  "deezerId": 24949681,
+  "artist": "Lynyrd Skynyrd",
+  "title": "Sweet Home Alabama",
+  "year": 1974,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "deep-purple-smoke-on-the-water",
+  "deezerId": 60840057,
+  "artist": "Deep Purple",
+  "title": "Smoke on the Water",
+  "year": 1972,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "ac-dc-highway-to-hell",
+  "deezerId": 92719900,
+  "artist": "AC/DC",
+  "title": "Highway to Hell",
+  "year": 1979,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "stevie-wonder-superstition",
+  "deezerId": 596034702,
+  "artist": "Stevie Wonder",
+  "title": "Superstition",
+  "year": 1972,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "marvin-gaye-what-s-going-on",
+  "deezerId": 1133408852,
+  "artist": "Marvin Gaye",
+  "title": "What's Going On",
+  "year": 1971,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "bob-marley-the-wailers-is-this-love",
+  "deezerId": 2293791,
+  "artist": "Bob Marley & The Wailers",
+  "title": "Is This Love",
+  "year": 1978,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "john-lennon-imagine",
+  "deezerId": 7193834,
+  "artist": "John Lennon",
+  "title": "Imagine",
+  "year": 1971,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "don-mclean-american-pie",
+  "deezerId": 3156285,
+  "artist": "Don McLean",
+  "title": "American Pie",
+  "year": 1971,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "billy-joel-piano-man",
+  "deezerId": 14333215,
+  "artist": "Billy Joel",
+  "title": "Piano Man",
+  "year": 1973,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bruce-springsteen-born-to-run",
+  "deezerId": 71136901,
+  "artist": "Bruce Springsteen",
+  "title": "Born to Run",
+  "year": 1975,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-clash-london-calling",
+  "deezerId": 69924599,
+  "artist": "The Clash",
+  "title": "London Calling",
+  "year": 1979,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "sex-pistols-god-save-the-queen",
+  "deezerId": 60742395,
+  "artist": "Sex Pistols",
+  "title": "God Save the Queen",
+  "year": 1977,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "ramones-blitzkrieg-bop",
+  "deezerId": 131744724,
+  "artist": "Ramones",
+  "title": "Blitzkrieg Bop",
+  "year": 1976,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "blondie-heart-of-glass",
+  "deezerId": 3121608,
+  "artist": "Blondie",
+  "title": "Heart of Glass",
+  "year": 1978,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-knack-my-sharona",
+  "deezerId": 3248376,
+  "artist": "The Knack",
+  "title": "My Sharona",
+  "year": 1979,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "supertramp-the-logical-song",
+  "deezerId": 2503274,
+  "artist": "Supertramp",
+  "title": "The Logical Song",
+  "year": 1979,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "kiss-i-was-made-for-lovin-you",
+  "deezerId": 2267042,
+  "artist": "Kiss",
+  "title": "I Was Made for Lovin' You",
+  "year": 1979,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "rod-stewart-da-ya-think-i-m-sexy",
+  "deezerId": 2550736,
+  "artist": "Rod Stewart",
+  "title": "Da Ya Think I'm Sexy?",
+  "year": 1978,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "electric-light-orchestra-mr-blue-sky",
+  "deezerId": 112662184,
+  "artist": "Electric Light Orchestra",
+  "title": "Mr. Blue Sky",
+  "year": 1977,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "carl-douglas-kung-fu-fighting",
+  "deezerId": 3782909292,
+  "artist": "Carl Douglas",
+  "title": "Kung Fu Fighting",
+  "year": 1974,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-jackson-5-abc",
+  "deezerId": 920082,
+  "artist": "The Jackson 5",
+  "title": "ABC",
+  "year": 1970,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "simon-garfunkel-bridge-over-troubled-water",
+  "deezerId": 13174764,
+  "artist": "Simon & Garfunkel",
+  "title": "Bridge over Troubled Water",
+  "year": 1970,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "hot-chocolate-you-sexy-thing",
+  "deezerId": 3851861,
+  "artist": "Hot Chocolate",
+  "title": "You Sexy Thing",
+  "year": 1975,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "kate-bush-wuthering-heights",
+  "deezerId": 3128004,
+  "artist": "Kate Bush",
+  "title": "Wuthering Heights",
+  "year": 1978,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "josipa-lisac-o-jednoj-mladosti",
+  "deezerId": 3017106271,
+  "artist": "Josipa Lisac",
+  "title": "O jednoj mladosti",
+  "year": 1973,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bijelo-dugme-tako-ti-je-mala-moja-kad-ljubi-bosanac",
+  "deezerId": 2994231651,
+  "artist": "Bijelo dugme",
+  "title": "Tako ti je, mala moja, kad ljubi Bosanac",
+  "year": 1974,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bijelo-dugme-lose-vino",
+  "deezerId": 2994244191,
+  "artist": "Bijelo dugme",
+  "title": "Loše vino",
+  "year": 1976,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bijelo-dugme-bitanga-i-princeza",
+  "deezerId": 2994231691,
+  "artist": "Bijelo dugme",
+  "title": "Bitanga i princeza",
+  "year": 1979,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "riblja-corba-lutka-sa-naslovne-strane",
+  "deezerId": 2464031485,
+  "artist": "Riblja čorba",
+  "title": "Lutka sa naslovne strane",
+  "year": 1978,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "srebrna-krila-ana",
+  "deezerId": 2994499371,
+  "artist": "Srebrna krila",
+  "title": "Ana",
+  "year": 1979,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "zdravko-colic-glavo-luda",
+  "deezerId": 2995450541,
+  "artist": "Zdravko Čolić",
+  "title": "Glavo luda",
+  "year": 1978,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "prljavo-kazaliste-moderna-djevojka",
+  "deezerId": 4407169811,
+  "artist": "Prljavo kazalište",
+  "title": "Moderna djevojka",
+  "year": 1979,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "michael-jackson-billie-jean",
+  "deezerId": 4603408,
+  "artist": "Michael Jackson",
+  "title": "Billie Jean",
+  "year": 1982,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "michael-jackson-beat-it",
+  "deezerId": 4763165,
+  "artist": "Michael Jackson",
+  "title": "Beat It",
+  "year": 1982,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "madonna-like-a-virgin",
+  "deezerId": 678336,
+  "artist": "Madonna",
+  "title": "Like a Virgin",
+  "year": 1984,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "madonna-like-a-prayer",
+  "deezerId": 664507,
+  "artist": "Madonna",
+  "title": "Like a Prayer",
+  "year": 1989,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "prince-purple-rain",
+  "deezerId": 374283061,
+  "artist": "Prince",
+  "title": "Purple Rain",
+  "year": 1984,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "whitney-houston-i-wanna-dance-with-somebody-who-loves-me",
+  "deezerId": 75981528,
+  "artist": "Whitney Houston",
+  "title": "I Wanna Dance with Somebody (Who Loves Me)",
+  "year": 1987,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "queen-another-one-bites-the-dust",
+  "deezerId": 4092324041,
+  "artist": "Queen",
+  "title": "Another One Bites the Dust",
+  "year": 1980,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "a-ha-take-on-me",
+  "deezerId": 432951302,
+  "artist": "a-ha",
+  "title": "Take On Me",
+  "year": 1985,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "europe-the-final-countdown",
+  "deezerId": 619310,
+  "artist": "Europe",
+  "title": "The Final Countdown",
+  "year": 1986,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bon-jovi-livin-on-a-prayer",
+  "deezerId": 538660022,
+  "artist": "Bon Jovi",
+  "title": "Livin' on a Prayer",
+  "year": 1986,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "guns-n-roses-sweet-child-o-mine",
+  "deezerId": 518458172,
+  "artist": "Guns N' Roses",
+  "title": "Sweet Child o' Mine",
+  "year": 1987,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "survivor-eye-of-the-tiger",
+  "deezerId": 576431,
+  "artist": "Survivor",
+  "title": "Eye of the Tiger",
+  "year": 1982,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "toto-africa",
+  "deezerId": 1079668,
+  "artist": "Toto",
+  "title": "Africa",
+  "year": 1982,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "cyndi-lauper-girls-just-want-to-have-fun",
+  "deezerId": 72194071,
+  "artist": "Cyndi Lauper",
+  "title": "Girls Just Want to Have Fun",
+  "year": 1983,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "wham-wake-me-up-before-you-go-go",
+  "deezerId": 15194531,
+  "artist": "Wham!",
+  "title": "Wake Me Up Before You Go-Go",
+  "year": 1984,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "wham-last-christmas",
+  "deezerId": 1036586,
+  "artist": "Wham!",
+  "title": "Last Christmas",
+  "year": 1984,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "eurythmics-sweet-dreams-are-made-of-this",
+  "deezerId": 561836,
+  "artist": "Eurythmics",
+  "title": "Sweet Dreams (Are Made of This)",
+  "year": 1983,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "tears-for-fears-everybody-wants-to-rule-the-world",
+  "deezerId": 88845771,
+  "artist": "Tears for Fears",
+  "title": "Everybody Wants to Rule the World",
+  "year": 1985,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "dire-straits-money-for-nothing",
+  "deezerId": 2514681,
+  "artist": "Dire Straits",
+  "title": "Money for Nothing",
+  "year": 1985,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "u2-with-or-without-you",
+  "deezerId": 912486,
+  "artist": "U2",
+  "title": "With or Without You",
+  "year": 1987,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bruce-springsteen-born-in-the-u-s-a",
+  "deezerId": 15586213,
+  "artist": "Bruce Springsteen",
+  "title": "Born in the U.S.A.",
+  "year": 1984,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "phil-collins-in-the-air-tonight",
+  "deezerId": 134036212,
+  "artist": "Phil Collins",
+  "title": "In the Air Tonight",
+  "year": 1981,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "duran-duran-hungry-like-the-wolf",
+  "deezerId": 3130433,
+  "artist": "Duran Duran",
+  "title": "Hungry Like the Wolf",
+  "year": 1982,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-police-every-breath-you-take",
+  "deezerId": 2525864,
+  "artist": "The Police",
+  "title": "Every Breath You Take",
+  "year": 1983,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "kim-wilde-kids-in-america",
+  "deezerId": 2891799832,
+  "artist": "Kim Wilde",
+  "title": "Kids in America",
+  "year": 1981,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "depeche-mode-just-can-t-get-enough",
+  "deezerId": 68513610,
+  "artist": "Depeche Mode",
+  "title": "Just Can't Get Enough",
+  "year": 1981,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "depeche-mode-personal-jesus",
+  "deezerId": 68513563,
+  "artist": "Depeche Mode",
+  "title": "Personal Jesus",
+  "year": 1989,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "rick-astley-never-gonna-give-you-up",
+  "deezerId": 3786363472,
+  "artist": "Rick Astley",
+  "title": "Never Gonna Give You Up",
+  "year": 1987,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "bonnie-tyler-total-eclipse-of-the-heart",
+  "deezerId": 532349,
+  "artist": "Bonnie Tyler",
+  "title": "Total Eclipse of the Heart",
+  "year": 1983,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "lionel-richie-all-night-long-all-night",
+  "deezerId": 920062,
+  "artist": "Lionel Richie",
+  "title": "All Night Long (All Night)",
+  "year": 1983,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "kenny-loggins-footloose",
+  "deezerId": 134012978,
+  "artist": "Kenny Loggins",
+  "title": "Footloose",
+  "year": 1984,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "irene-cara-flashdance-what-a-feeling",
+  "deezerId": 62419007,
+  "artist": "Irene Cara",
+  "title": "Flashdance... What a Feeling",
+  "year": 1983,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "modern-talking-you-re-my-heart-you-re-my-soul",
+  "deezerId": 74249041,
+  "artist": "Modern Talking",
+  "title": "You're My Heart, You're My Soul",
+  "year": 1984,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "falco-rock-me-amadeus",
+  "deezerId": 958977102,
+  "artist": "Falco",
+  "title": "Rock Me Amadeus",
+  "year": 1985,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "nena-99-luftballons",
+  "deezerId": 3786206112,
+  "artist": "Nena",
+  "title": "99 Luftballons",
+  "year": 1983,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "joan-jett-the-blackhearts-i-love-rock-n-roll",
+  "deezerId": 3795205892,
+  "artist": "Joan Jett & the Blackhearts",
+  "title": "I Love Rock 'n' Roll",
+  "year": 1981,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "ac-dc-back-in-black",
+  "deezerId": 92720046,
+  "artist": "AC/DC",
+  "title": "Back in Black",
+  "year": 1980,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-human-league-don-t-you-want-me",
+  "deezerId": 3092940,
+  "artist": "The Human League",
+  "title": "Don't You Want Me",
+  "year": 1981,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "simple-minds-don-t-you-forget-about-me",
+  "deezerId": 3158150,
+  "artist": "Simple Minds",
+  "title": "Don't You (Forget About Me)",
+  "year": 1985,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "billy-idol-rebel-yell",
+  "deezerId": 353398301,
+  "artist": "Billy Idol",
+  "title": "Rebel Yell",
+  "year": 1983,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "roxette-the-look",
+  "deezerId": 3092167,
+  "artist": "Roxette",
+  "title": "The Look",
+  "year": 1988,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bobby-mcferrin-don-t-worry-be-happy",
+  "deezerId": 3127387,
+  "artist": "Bobby McFerrin",
+  "title": "Don't Worry Be Happy",
+  "year": 1988,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "george-michael-faith",
+  "deezerId": 8146779,
+  "artist": "George Michael",
+  "title": "Faith",
+  "year": 1987,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "kylie-minogue-i-should-be-so-lucky",
+  "deezerId": 3785971252,
+  "artist": "Kylie Minogue",
+  "title": "I Should Be So Lucky",
+  "year": 1987,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "pet-shop-boys-it-s-a-sin",
+  "deezerId": 3122973,
+  "artist": "Pet Shop Boys",
+  "title": "It's a Sin",
+  "year": 1987,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "bryan-adams-summer-of-69",
+  "deezerId": 88902741,
+  "artist": "Bryan Adams",
+  "title": "Summer of '69",
+  "year": 1984,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "def-leppard-pour-some-sugar-on-me",
+  "deezerId": 447552822,
+  "artist": "Def Leppard",
+  "title": "Pour Some Sugar on Me",
+  "year": 1987,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "men-at-work-down-under",
+  "deezerId": 1030221,
+  "artist": "Men at Work",
+  "title": "Down Under",
+  "year": 1981,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "opus-live-is-life",
+  "deezerId": 15379465,
+  "artist": "Opus",
+  "title": "Live Is Life",
+  "year": 1985,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "prljavo-kazaliste-crno-bijeli-svijet",
+  "deezerId": 913391162,
+  "artist": "Prljavo kazalište",
+  "title": "Crno bijeli svijet",
+  "year": 1980,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "prljavo-kazaliste-mi-plesemo",
+  "deezerId": 928567582,
+  "artist": "Prljavo kazalište",
+  "title": "Mi plešemo",
+  "year": 1980,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bijelo-dugme-lipe-cvatu",
+  "deezerId": 69403518,
+  "artist": "Bijelo dugme",
+  "title": "Lipe cvatu",
+  "year": 1984,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bijelo-dugme-durdevdan",
+  "deezerId": 3016879121,
+  "artist": "Bijelo dugme",
+  "title": "Đurđevdan",
+  "year": 1988,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "haustor-moja-prva-ljubav",
+  "deezerId": 928549682,
+  "artist": "Haustor",
+  "title": "Moja prva ljubav",
+  "year": 1981,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "film-zamisli-zivot-u-ritmu-muzike-za-ples",
+  "deezerId": 2995551291,
+  "artist": "Film",
+  "title": "Zamisli život u ritmu muzike za ples",
+  "year": 1981,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "elektricni-orgazam-igra-rokenrol-cela-jugoslavija",
+  "deezerId": 2997909791,
+  "artist": "Električni orgazam",
+  "title": "Igra rokenrol cela Jugoslavija",
+  "year": 1988,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "plavi-orkestar-suada",
+  "deezerId": 2995522181,
+  "artist": "Plavi orkestar",
+  "title": "Suada",
+  "year": 1985,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "zabranjeno-pusenje-zenica-blues",
+  "deezerId": 1869730077,
+  "artist": "Zabranjeno pušenje",
+  "title": "Zenica blues",
+  "year": 1984,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "zdravko-colic-ti-si-mi-u-krvi",
+  "deezerId": 2617677792,
+  "artist": "Zdravko Čolić",
+  "title": "Ti si mi u krvi",
+  "year": 1984,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "lepa-brena-jugoslovenka",
+  "deezerId": 995385502,
+  "artist": "Lepa Brena",
+  "title": "Jugoslovenka",
+  "year": 1989,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "doris-dragovic-zeljo-moja",
+  "deezerId": 1014394072,
+  "artist": "Doris Dragović",
+  "title": "Željo moja",
+  "year": 1986,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "riva-rock-me",
+  "deezerId": 3018745441,
+  "artist": "Riva",
+  "title": "Rock Me",
+  "year": 1989,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "psihomodo-pop-ja-volim-samo-sebe",
+  "deezerId": 1021092512,
+  "artist": "Psihomodo pop",
+  "title": "Ja volim samo sebe",
+  "year": 1988,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "idoli-maljciki",
+  "deezerId": 23797711,
+  "artist": "Idoli",
+  "title": "Maljčiki",
+  "year": 1981,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "crvena-jabuka-bjezi-kiso-s-prozora",
+  "deezerId": 3656628842,
+  "artist": "Crvena jabuka",
+  "title": "Bježi kišo s prozora",
+  "year": 1986,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "boris-novkovic-kuda-idu-izgubljene-djevojke",
+  "deezerId": 2998617351,
+  "artist": "Boris Novković",
+  "title": "Kuda idu izgubljene djevojke",
+  "year": 1986,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "novi-fosili-za-dobra-stara-vremena",
+  "deezerId": 714873892,
+  "artist": "Novi fosili",
+  "title": "Za dobra stara vremena",
+  "year": 1986,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "nirvana-smells-like-teen-spirit",
+  "deezerId": 13791930,
+  "artist": "Nirvana",
+  "title": "Smells Like Teen Spirit",
+  "year": 1991,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "spice-girls-wannabe",
+  "deezerId": 3133738,
+  "artist": "Spice Girls",
+  "title": "Wannabe",
+  "year": 1996,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "backstreet-boys-i-want-it-that-way",
+  "deezerId": 13141170,
+  "artist": "Backstreet Boys",
+  "title": "I Want It That Way",
+  "year": 1999,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "britney-spears-baby-one-more-time",
+  "deezerId": 540175,
+  "artist": "Britney Spears",
+  "title": "...Baby One More Time",
+  "year": 1998,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "oasis-wonderwall",
+  "deezerId": 84572613,
+  "artist": "Oasis",
+  "title": "Wonderwall",
+  "year": 1995,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "coolio-gangsta-s-paradise",
+  "deezerId": 1584416372,
+  "artist": "Coolio",
+  "title": "Gangsta's Paradise",
+  "year": 1995,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "whitney-houston-i-will-always-love-you",
+  "deezerId": 7675403,
+  "artist": "Whitney Houston",
+  "title": "I Will Always Love You",
+  "year": 1992,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "mariah-carey-all-i-want-for-christmas-is-you",
+  "deezerId": 62710442,
+  "artist": "Mariah Carey",
+  "title": "All I Want for Christmas Is You",
+  "year": 1994,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "celine-dion-my-heart-will-go-on",
+  "deezerId": 14552280,
+  "artist": "Celine Dion",
+  "title": "My Heart Will Go On",
+  "year": 1997,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "r-e-m-losing-my-religion",
+  "deezerId": 136334560,
+  "artist": "R.E.M.",
+  "title": "Losing My Religion",
+  "year": 1991,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "haddaway-what-is-love",
+  "deezerId": 3786149242,
+  "artist": "Haddaway",
+  "title": "What Is Love",
+  "year": 1993,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "2-unlimited-no-limit",
+  "deezerId": 134706074,
+  "artist": "2 Unlimited",
+  "title": "No Limit",
+  "year": 1993,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "dr-alban-it-s-my-life",
+  "deezerId": 3801448032,
+  "artist": "Dr. Alban",
+  "title": "It's My Life",
+  "year": 1992,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "ace-of-base-all-that-she-wants",
+  "deezerId": 94676692,
+  "artist": "Ace of Base",
+  "title": "All That She Wants",
+  "year": 1992,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "snap-rhythm-is-a-dancer",
+  "deezerId": 3785942552,
+  "artist": "Snap!",
+  "title": "Rhythm Is a Dancer",
+  "year": 1992,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "eiffel-65-blue-da-ba-dee",
+  "deezerId": 89629797,
+  "artist": "Eiffel 65",
+  "title": "Blue (Da Ba Dee)",
+  "year": 1998,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "aqua-barbie-girl",
+  "deezerId": 1115044,
+  "artist": "Aqua",
+  "title": "Barbie Girl",
+  "year": 1997,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "ricky-martin-livin-la-vida-loca",
+  "deezerId": 13704591,
+  "artist": "Ricky Martin",
+  "title": "Livin' la Vida Loca",
+  "year": 1999,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "lou-bega-mambo-no-5-a-little-bit-of",
+  "deezerId": 434625962,
+  "artist": "Lou Bega",
+  "title": "Mambo No. 5 (A Little Bit of...)",
+  "year": 1999,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "red-hot-chili-peppers-under-the-bridge",
+  "deezerId": 785176,
+  "artist": "Red Hot Chili Peppers",
+  "title": "Under the Bridge",
+  "year": 1992,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "radiohead-creep",
+  "deezerId": 138547415,
+  "artist": "Radiohead",
+  "title": "Creep",
+  "year": 1992,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "blur-song-2",
+  "deezerId": 3102130,
+  "artist": "Blur",
+  "title": "Song 2",
+  "year": 1997,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-cranberries-zombie",
+  "deezerId": 952788,
+  "artist": "The Cranberries",
+  "title": "Zombie",
+  "year": 1994,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "no-doubt-don-t-speak",
+  "deezerId": 24246391,
+  "artist": "No Doubt",
+  "title": "Don't Speak",
+  "year": 1995,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "tlc-no-scrubs",
+  "deezerId": 1075781,
+  "artist": "TLC",
+  "title": "No Scrubs",
+  "year": 1999,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "fugees-killing-me-softly",
+  "deezerId": 869548,
+  "artist": "Fugees",
+  "title": "Killing Me Softly",
+  "year": 1996,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "dr-dre-still-d-r-e",
+  "deezerId": 128743581,
+  "artist": "Dr. Dre",
+  "title": "Still D.R.E.",
+  "year": 1999,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "will-smith-men-in-black",
+  "deezerId": 626417,
+  "artist": "Will Smith",
+  "title": "Men in Black",
+  "year": 1997,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "vengaboys-boom-boom-boom-boom",
+  "deezerId": 1802253167,
+  "artist": "Vengaboys",
+  "title": "Boom, Boom, Boom, Boom!!",
+  "year": 1998,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "alanis-morissette-ironic",
+  "deezerId": 789250,
+  "artist": "Alanis Morissette",
+  "title": "Ironic",
+  "year": 1995,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "bryan-adams-everything-i-do-i-do-it-for-you",
+  "deezerId": 1182159,
+  "artist": "Bryan Adams",
+  "title": "(Everything I Do) I Do It for You",
+  "year": 1991,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "guns-n-roses-november-rain",
+  "deezerId": 1169683,
+  "artist": "Guns N' Roses",
+  "title": "November Rain",
+  "year": 1991,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "metallica-enter-sandman",
+  "deezerId": 1483825212,
+  "artist": "Metallica",
+  "title": "Enter Sandman",
+  "year": 1991,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "michael-jackson-black-or-white",
+  "deezerId": 15593566,
+  "artist": "Michael Jackson",
+  "title": "Black or White",
+  "year": 1991,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "madonna-frozen",
+  "deezerId": 778758,
+  "artist": "Madonna",
+  "title": "Frozen",
+  "year": 1998,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "robbie-williams-angels",
+  "deezerId": 3138729,
+  "artist": "Robbie Williams",
+  "title": "Angels",
+  "year": 1997,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "shania-twain-man-i-feel-like-a-woman",
+  "deezerId": 731732392,
+  "artist": "Shania Twain",
+  "title": "Man! I Feel Like a Woman!",
+  "year": 1997,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "cher-believe",
+  "deezerId": 786717,
+  "artist": "Cher",
+  "title": "Believe",
+  "year": 1998,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "la-bouche-be-my-lover",
+  "deezerId": 4096754,
+  "artist": "La Bouche",
+  "title": "Be My Lover",
+  "year": 1995,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "culture-beat-mr-vain",
+  "deezerId": 17347911,
+  "artist": "Culture Beat",
+  "title": "Mr. Vain",
+  "year": 1993,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "scatman-john-scatman-ski-ba-bop-ba-dop-bop",
+  "deezerId": 99348362,
+  "artist": "Scatman John",
+  "title": "Scatman (Ski-Ba-Bop-Ba-Dop-Bop)",
+  "year": 1994,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "oliver-dragojevic-cesarica",
+  "deezerId": 913359072,
+  "artist": "Oliver Dragojević",
+  "title": "Cesarica",
+  "year": 1994,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "gibonni-libar",
+  "deezerId": 66124053,
+  "artist": "Gibonni",
+  "title": "Libar",
+  "year": 1997,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "gibonni-zlatne-godine",
+  "deezerId": 928552652,
+  "artist": "Gibonni",
+  "title": "Zlatne godine",
+  "year": 1993,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "severina-djevojka-sa-sela",
+  "deezerId": 933519952,
+  "artist": "Severina",
+  "title": "Djevojka sa sela",
+  "year": 1998,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "et-tek-je-12-sati",
+  "deezerId": 881275822,
+  "artist": "ET",
+  "title": "Tek je 12 sati",
+  "year": 1994,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "parni-valjak-sve-jos-mirise-na-nju",
+  "deezerId": 928569602,
+  "artist": "Parni valjak",
+  "title": "Sve još miriše na nju",
+  "year": 1994,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "magazin-minus-i-plus",
+  "deezerId": 1006925662,
+  "artist": "Magazin",
+  "title": "Minus i plus",
+  "year": 1996,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "doris-dragovic-marija-magdalena",
+  "deezerId": 1014394102,
+  "artist": "Doris Dragović",
+  "title": "Marija Magdalena",
+  "year": 1999,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "hari-mata-hari-strah-me-da-te-volim",
+  "deezerId": 74514968,
+  "artist": "Hari Mata Hari",
+  "title": "Strah me da te volim",
+  "year": 1990,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "massimo-benzina",
+  "deezerId": 2994607291,
+  "artist": "Massimo",
+  "title": "Benzina",
+  "year": 1995,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "maja-blagdan-sveta-ljubav",
+  "deezerId": 2994742631,
+  "artist": "Maja Blagdan",
+  "title": "Sveta ljubav",
+  "year": 1996,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "danijela-neka-mi-ne-svane",
+  "deezerId": 2994507151,
+  "artist": "Danijela",
+  "title": "Neka mi ne svane",
+  "year": 1998,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "eminem-without-me",
+  "deezerId": 916424,
+  "artist": "Eminem",
+  "title": "Without Me",
+  "year": 2002,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "eminem-lose-yourself",
+  "deezerId": 1109731,
+  "artist": "Eminem",
+  "title": "Lose Yourself",
+  "year": 2002,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "beyonce-crazy-in-love",
+  "deezerId": 609244,
+  "artist": "Beyoncé",
+  "title": "Crazy in Love",
+  "year": 2003,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "outkast-hey-ya",
+  "deezerId": 628266,
+  "artist": "OutKast",
+  "title": "Hey Ya!",
+  "year": 2003,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-white-stripes-seven-nation-army",
+  "deezerId": 1153182282,
+  "artist": "The White Stripes",
+  "title": "Seven Nation Army",
+  "year": 2003,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "amy-winehouse-rehab",
+  "deezerId": 2176852,
+  "artist": "Amy Winehouse",
+  "title": "Rehab",
+  "year": 2006,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "rihanna-umbrella",
+  "deezerId": 925106,
+  "artist": "Rihanna",
+  "title": "Umbrella",
+  "year": 2007,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "lady-gaga-poker-face",
+  "deezerId": 2603558,
+  "artist": "Lady Gaga",
+  "title": "Poker Face",
+  "year": 2008,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "black-eyed-peas-i-gotta-feeling",
+  "deezerId": 4619466,
+  "artist": "Black Eyed Peas",
+  "title": "I Gotta Feeling",
+  "year": 2009,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "coldplay-yellow",
+  "deezerId": 3128096,
+  "artist": "Coldplay",
+  "title": "Yellow",
+  "year": 2000,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "coldplay-viva-la-vida",
+  "deezerId": 3157972,
+  "artist": "Coldplay",
+  "title": "Viva la Vida",
+  "year": 2008,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "the-killers-mr-brightside",
+  "deezerId": 953097,
+  "artist": "The Killers",
+  "title": "Mr. Brightside",
+  "year": 2003,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "linkin-park-in-the-end",
+  "deezerId": 676183,
+  "artist": "Linkin Park",
+  "title": "In the End",
+  "year": 2000,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "shakira-whenever-wherever",
+  "deezerId": 15211178,
+  "artist": "Shakira",
+  "title": "Whenever, Wherever",
+  "year": 2001,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "shakira-hips-don-t-lie",
+  "deezerId": 3389132901,
+  "artist": "Shakira",
+  "title": "Hips Don't Lie",
+  "year": 2006,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "britney-spears-toxic",
+  "deezerId": 15391618,
+  "artist": "Britney Spears",
+  "title": "Toxic",
+  "year": 2003,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "kylie-minogue-can-t-get-you-out-of-my-head",
+  "deezerId": 3098100,
+  "artist": "Kylie Minogue",
+  "title": "Can't Get You Out of My Head",
+  "year": 2001,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "gnarls-barkley-crazy",
+  "deezerId": 2794160,
+  "artist": "Gnarls Barkley",
+  "title": "Crazy",
+  "year": 2006,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "daft-punk-one-more-time",
+  "deezerId": 3135553,
+  "artist": "Daft Punk",
+  "title": "One More Time",
+  "year": 2000,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "justin-timberlake-sexyback",
+  "deezerId": 15489383,
+  "artist": "Justin Timberlake",
+  "title": "SexyBack",
+  "year": 2006,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "nelly-furtado-maneater",
+  "deezerId": 1151141,
+  "artist": "Nelly Furtado",
+  "title": "Maneater",
+  "year": 2006,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "usher-yeah",
+  "deezerId": 13783449,
+  "artist": "Usher",
+  "title": "Yeah!",
+  "year": 2004,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "50-cent-in-da-club",
+  "deezerId": 1141668,
+  "artist": "50 Cent",
+  "title": "In da Club",
+  "year": 2003,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "green-day-boulevard-of-broken-dreams",
+  "deezerId": 6611231,
+  "artist": "Green Day",
+  "title": "Boulevard of Broken Dreams",
+  "year": 2004,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "gorillaz-feel-good-inc",
+  "deezerId": 3129407,
+  "artist": "Gorillaz",
+  "title": "Feel Good Inc.",
+  "year": 2005,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "kanye-west-gold-digger",
+  "deezerId": 1184309,
+  "artist": "Kanye West",
+  "title": "Gold Digger",
+  "year": 2005,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "james-blunt-you-re-beautiful",
+  "deezerId": 2659940,
+  "artist": "James Blunt",
+  "title": "You're Beautiful",
+  "year": 2004,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "leona-lewis-bleeding-love",
+  "deezerId": 365137,
+  "artist": "Leona Lewis",
+  "title": "Bleeding Love",
+  "year": 2007,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "katy-perry-i-kissed-a-girl",
+  "deezerId": 3169161,
+  "artist": "Katy Perry",
+  "title": "I Kissed a Girl",
+  "year": 2008,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "kings-of-leon-sex-on-fire",
+  "deezerId": 15531170,
+  "artist": "Kings of Leon",
+  "title": "Sex on Fire",
+  "year": 2008,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "las-ketchup-the-ketchup-song-asereje",
+  "deezerId": 476739462,
+  "artist": "Las Ketchup",
+  "title": "The Ketchup Song (Aserejé)",
+  "year": 2002,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "avril-lavigne-complicated",
+  "deezerId": 15587465,
+  "artist": "Avril Lavigne",
+  "title": "Complicated",
+  "year": 2002,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "christina-aguilera-beautiful",
+  "deezerId": 967334,
+  "artist": "Christina Aguilera",
+  "title": "Beautiful",
+  "year": 2002,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "alicia-keys-fallin",
+  "deezerId": 959183,
+  "artist": "Alicia Keys",
+  "title": "Fallin'",
+  "year": 2001,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "destiny-s-child-survivor",
+  "deezerId": 5817089,
+  "artist": "Destiny's Child",
+  "title": "Survivor",
+  "year": 2001,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "modjo-lady-hear-me-tonight",
+  "deezerId": 70179720,
+  "artist": "Modjo",
+  "title": "Lady (Hear Me Tonight)",
+  "year": 2000,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "bob-sinclar-love-generation",
+  "deezerId": 2635211862,
+  "artist": "Bob Sinclar",
+  "title": "Love Generation",
+  "year": 2005,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "sean-paul-get-busy",
+  "deezerId": 364292561,
+  "artist": "Sean Paul",
+  "title": "Get Busy",
+  "year": 2002,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "duffy-mercy",
+  "deezerId": 2606173,
+  "artist": "Duffy",
+  "title": "Mercy",
+  "year": 2008,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "severina-moja-stikla",
+  "deezerId": 66124097,
+  "artist": "Severina",
+  "title": "Moja štikla",
+  "year": 2006,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "gibonni-mirakul",
+  "deezerId": 66124057,
+  "artist": "Gibonni",
+  "title": "Mirakul",
+  "year": 2001,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "hladno-pivo-samar",
+  "deezerId": 1449039292,
+  "artist": "Hladno pivo",
+  "title": "Šamar",
+  "year": 2003,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "dino-merlin-godinama",
+  "deezerId": 134879468,
+  "artist": "Dino Merlin",
+  "title": "Godinama",
+  "year": 2000,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "tose-proeski-igra-bez-granica",
+  "deezerId": 529457751,
+  "artist": "Toše Proeski",
+  "title": "Igra bez granica",
+  "year": 2006,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "nina-badric-ja-za-ljubav-necu-moliti",
+  "deezerId": 885171562,
+  "artist": "Nina Badrić",
+  "title": "Ja za ljubav neću moliti",
+  "year": 1997,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "edo-maajka-prikaze",
+  "deezerId": 66460576,
+  "artist": "Edo Maajka",
+  "title": "Prikaze",
+  "year": 2002,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "marija-serifovic-molitva",
+  "deezerId": 1841884507,
+  "artist": "Marija Šerifović",
+  "title": "Molitva",
+  "year": 2007,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "feminnem-lako-je-sve",
+  "deezerId": 2995522551,
+  "artist": "Feminnem",
+  "title": "Lako je sve",
+  "year": 2005,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "zeljko-joksimovic-lane-moje",
+  "deezerId": 543692512,
+  "artist": "Željko Joksimović",
+  "title": "Lane moje",
+  "year": 2004,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "adele-rolling-in-the-deep",
+  "deezerId": 8086126,
+  "artist": "Adele",
+  "title": "Rolling in the Deep",
+  "year": 2010,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "adele-someone-like-you",
+  "deezerId": 8086136,
+  "artist": "Adele",
+  "title": "Someone Like You",
+  "year": 2011,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "gotye-somebody-that-i-used-to-know",
+  "deezerId": 14993990,
+  "artist": "Gotye",
+  "title": "Somebody That I Used to Know",
+  "year": 2011,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "pharrell-williams-happy",
+  "deezerId": 701326562,
+  "artist": "Pharrell Williams",
+  "title": "Happy",
+  "year": 2013,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "mark-ronson-uptown-funk",
+  "deezerId": 92734438,
+  "artist": "Mark Ronson",
+  "title": "Uptown Funk",
+  "year": 2014,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "ed-sheeran-shape-of-you",
+  "deezerId": 139470659,
+  "artist": "Ed Sheeran",
+  "title": "Shape of You",
+  "year": 2017,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "daft-punk-get-lucky",
+  "deezerId": 67238735,
+  "artist": "Daft Punk",
+  "title": "Get Lucky",
+  "year": 2013,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "psy-gangnam-style",
+  "deezerId": 60726278,
+  "artist": "PSY",
+  "title": "Gangnam Style",
+  "year": 2012,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "avicii-wake-me-up",
+  "deezerId": 70266756,
+  "artist": "Avicii",
+  "title": "Wake Me Up",
+  "year": 2013,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "luis-fonsi-despacito",
+  "deezerId": 623698142,
+  "artist": "Luis Fonsi",
+  "title": "Despacito",
+  "year": 2017,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-weeknd-blinding-lights",
+  "deezerId": 908604612,
+  "artist": "The Weeknd",
+  "title": "Blinding Lights",
+  "year": 2019,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "billie-eilish-bad-guy",
+  "deezerId": 655095912,
+  "artist": "Billie Eilish",
+  "title": "bad guy",
+  "year": 2019,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "carly-rae-jepsen-call-me-maybe",
+  "deezerId": 17826508,
+  "artist": "Carly Rae Jepsen",
+  "title": "Call Me Maybe",
+  "year": 2011,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "lmfao-party-rock-anthem",
+  "deezerId": 12565420,
+  "artist": "LMFAO",
+  "title": "Party Rock Anthem",
+  "year": 2011,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "katy-perry-firework",
+  "deezerId": 17135111,
+  "artist": "Katy Perry",
+  "title": "Firework",
+  "year": 2010,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "katy-perry-roar",
+  "deezerId": 71645431,
+  "artist": "Katy Perry",
+  "title": "Roar",
+  "year": 2013,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "bruno-mars-locked-out-of-heaven",
+  "deezerId": 62724015,
+  "artist": "Bruno Mars",
+  "title": "Locked Out of Heaven",
+  "year": 2012,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "imagine-dragons-radioactive",
+  "deezerId": 63510358,
+  "artist": "Imagine Dragons",
+  "title": "Radioactive",
+  "year": 2012,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "taylor-swift-shake-it-off",
+  "deezerId": 89077555,
+  "artist": "Taylor Swift",
+  "title": "Shake It Off",
+  "year": 2014,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "sia-chandelier",
+  "deezerId": 79587580,
+  "artist": "Sia",
+  "title": "Chandelier",
+  "year": 2014,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "macklemore-ryan-lewis-thrift-shop",
+  "deezerId": 61424045,
+  "artist": "Macklemore & Ryan Lewis",
+  "title": "Thrift Shop",
+  "year": 2012,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "rihanna-we-found-love",
+  "deezerId": 14525574,
+  "artist": "Rihanna",
+  "title": "We Found Love",
+  "year": 2011,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "calvin-harris-summer",
+  "deezerId": 88936747,
+  "artist": "Calvin Harris",
+  "title": "Summer",
+  "year": 2014,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "dua-lipa-new-rules",
+  "deezerId": 366297921,
+  "artist": "Dua Lipa",
+  "title": "New Rules",
+  "year": 2017,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "lil-nas-x-old-town-road",
+  "deezerId": 699056262,
+  "artist": "Lil Nas X",
+  "title": "Old Town Road",
+  "year": 2018,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "major-lazer-lean-on",
+  "deezerId": 113876568,
+  "artist": "Major Lazer",
+  "title": "Lean On",
+  "year": 2015,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "arctic-monkeys-do-i-wanna-know",
+  "deezerId": 70322130,
+  "artist": "Arctic Monkeys",
+  "title": "Do I Wanna Know?",
+  "year": 2013,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "hozier-take-me-to-church",
+  "deezerId": 84791735,
+  "artist": "Hozier",
+  "title": "Take Me to Church",
+  "year": 2013,
+  "local": false,
+  "yearSource": "manual"
+ },
+ {
+  "id": "portugal-the-man-feel-it-still",
+  "deezerId": 371593461,
+  "artist": "Portugal. The Man",
+  "title": "Feel It Still",
+  "year": 2017,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "jelena-rozga-bizuterija",
+  "deezerId": 719863962,
+  "artist": "Jelena Rozga",
+  "title": "Bižuterija",
+  "year": 2010,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "severina-italiana",
+  "deezerId": 595573432,
+  "artist": "Severina",
+  "title": "Italiana",
+  "year": 2012,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "mia-dimsic-bezimeni",
+  "deezerId": 3014295321,
+  "artist": "Mia Dimšić",
+  "title": "Bezimeni",
+  "year": 2017,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "jacques-houdek-my-friend",
+  "deezerId": 143324462,
+  "artist": "Jacques Houdek",
+  "title": "My Friend",
+  "year": 2017,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "nina-kraljic-lighthouse",
+  "deezerId": 133095076,
+  "artist": "Nina Kraljić",
+  "title": "Lighthouse",
+  "year": 2016,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "dino-merlin-love-in-rewind",
+  "deezerId": 3016922581,
+  "artist": "Dino Merlin",
+  "title": "Love in Rewind",
+  "year": 2011,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "zeljko-joksimovic-nije-ljubav-stvar",
+  "deezerId": 1989365287,
+  "artist": "Željko Joksimović",
+  "title": "Nije ljubav stvar",
+  "year": 2012,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "dubioza-kolektiv-no-escape-from-balkan",
+  "deezerId": 120971440,
+  "artist": "Dubioza kolektiv",
+  "title": "No Escape (from Balkan)",
+  "year": 2016,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "dua-lipa-levitating",
+  "deezerId": 1124841682,
+  "artist": "Dua Lipa",
+  "title": "Levitating",
+  "year": 2020,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "harry-styles-as-it-was",
+  "deezerId": 1703487577,
+  "artist": "Harry Styles",
+  "title": "As It Was",
+  "year": 2022,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "olivia-rodrigo-drivers-license",
+  "deezerId": 1378342592,
+  "artist": "Olivia Rodrigo",
+  "title": "drivers license",
+  "year": 2021,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-weeknd-save-your-tears",
+  "deezerId": 1352360622,
+  "artist": "The Weeknd",
+  "title": "Save Your Tears",
+  "year": 2020,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "maneskin-zitti-e-buoni",
+  "deezerId": 1262536082,
+  "artist": "Måneskin",
+  "title": "Zitti e buoni",
+  "year": 2021,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "miley-cyrus-flowers",
+  "deezerId": 2105158337,
+  "artist": "Miley Cyrus",
+  "title": "Flowers",
+  "year": 2023,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "glass-animals-heat-waves",
+  "deezerId": 1040154662,
+  "artist": "Glass Animals",
+  "title": "Heat Waves",
+  "year": 2020,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "lil-nas-x-montero-call-me-by-your-name",
+  "deezerId": 1283264142,
+  "artist": "Lil Nas X",
+  "title": "MONTERO (Call Me By Your Name)",
+  "year": 2021,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "ed-sheeran-bad-habits",
+  "deezerId": 1409072752,
+  "artist": "Ed Sheeran",
+  "title": "Bad Habits",
+  "year": 2021,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "doja-cat-kiss-me-more",
+  "deezerId": 1410738172,
+  "artist": "Doja Cat",
+  "title": "Kiss Me More",
+  "year": 2021,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "taylor-swift-anti-hero",
+  "deezerId": 1976903157,
+  "artist": "Taylor Swift",
+  "title": "Anti-Hero",
+  "year": 2022,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "sabrina-carpenter-espresso",
+  "deezerId": 2743578151,
+  "artist": "Sabrina Carpenter",
+  "title": "Espresso",
+  "year": 2024,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "billie-eilish-birds-of-a-feather",
+  "deezerId": 2801558052,
+  "artist": "Billie Eilish",
+  "title": "BIRDS OF A FEATHER",
+  "year": 2024,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "loreen-tattoo",
+  "deezerId": 2166864777,
+  "artist": "Loreen",
+  "title": "Tattoo",
+  "year": 2023,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "the-kid-laroi-stay",
+  "deezerId": 1425844092,
+  "artist": "The Kid LAROI",
+  "title": "STAY",
+  "year": 2021,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "elton-john-cold-heart",
+  "deezerId": 1457025872,
+  "artist": "Elton John",
+  "title": "Cold Heart",
+  "year": 2021,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "kendrick-lamar-not-like-us",
+  "deezerId": 2783963122,
+  "artist": "Kendrick Lamar",
+  "title": "Not Like Us",
+  "year": 2024,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "benson-boone-beautiful-things",
+  "deezerId": 2704682202,
+  "artist": "Benson Boone",
+  "title": "Beautiful Things",
+  "year": 2024,
+  "local": false,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "baby-lasagna-rim-tim-tagi-dim",
+  "deezerId": 2615453312,
+  "artist": "Baby Lasagna",
+  "title": "Rim Tim Tagi Dim",
+  "year": 2024,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "let-3-mama-sc",
+  "deezerId": 2114884607,
+  "artist": "Let 3",
+  "title": "Mama ŠČ!",
+  "year": 2023,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "albina-tick-tock",
+  "deezerId": 1235575162,
+  "artist": "Albina",
+  "title": "Tick-Tock",
+  "year": 2021,
+  "local": true,
+  "yearSource": "musicbrainz"
+ },
+ {
+  "id": "mia-dimsic-guilty-pleasure",
+  "deezerId": 3020552391,
+  "artist": "Mia Dimšić",
+  "title": "Guilty Pleasure",
+  "year": 2022,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "damir-kedzo-divlji-vjetre",
+  "deezerId": 1021354672,
+  "artist": "Damir Kedžo",
+  "title": "Divlji vjetre",
+  "year": 2020,
+  "local": true,
+  "yearSource": "manual"
+ },
+ {
+  "id": "konstrakta-in-corpore-sano",
+  "deezerId": 1655110372,
+  "artist": "Konstrakta",
+  "title": "In corpore sano",
+  "year": 2022,
+  "local": true,
+  "yearSource": "musicbrainz"
+ }
+]
