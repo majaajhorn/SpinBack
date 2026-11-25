@@ -1,11 +1,12 @@
+import type { CSSProperties, PointerEvent } from 'react'
 import { decadeOf } from '../game/engine'
 import type { Song } from '../game/types'
 
-/** Song card: decade-coloured year band (the Sleeve Rule), then title and artist. */
-export function Card({ song, variant }: { song: Song; variant?: 'new' | 'wrong' }) {
+/** Song card: decade-coloured year band (the Sleeve Rule), then title and artist. `k` staggers entry. */
+export function Card({ song, variant, k }: { song: Song; variant?: 'new' | 'wrong'; k?: number }) {
   const band = variant === 'wrong' ? 'var(--bad)' : `var(--d-${decadeOf(song.year)})`
   return (
-    <div className={`card ${variant ?? ''}`} data-focus={variant ? '' : undefined}>
+    <div className={`card ${variant ?? ''}`} data-focus={variant ? '' : undefined} style={k === undefined ? undefined : ({ '--k': k } as CSSProperties)}>
       <span className="card-year" style={{ background: band }}>
         {song.year}
       </span>
@@ -15,10 +16,27 @@ export function Card({ song, variant }: { song: Song; variant?: 'new' | 'wrong' 
   )
 }
 
+interface MysteryProps {
+  hint?: string
+  className?: string
+  /** Index this card occupies on the timeline, so it is also a drop target. */
+  slot?: number
+  onUndo?: () => void
+  onDragStart?: (e: PointerEvent<HTMLElement>) => void
+}
+
 /** Face-down mystery card. Never shows anything about the song. */
-export function MysteryCard({ hint, onUndo }: { hint?: string; onUndo?: () => void }) {
+export function MysteryCard({ hint, className = '', slot, onUndo, onDragStart }: MysteryProps) {
   return (
-    <div className="card mystery" data-focus="">
+    <div
+      className={`card mystery ${className}`}
+      data-focus=""
+      data-slot={slot}
+      data-drag={onDragStart ? '' : undefined}
+      onPointerDown={onDragStart}
+      role={onDragStart ? 'img' : undefined}
+      aria-label={onDragStart ? 'Tajna pjesma. Povuci je na crtu ili dodirni +.' : undefined}
+    >
       <span className="q" aria-hidden="true">
         ?
       </span>

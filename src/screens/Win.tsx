@@ -1,3 +1,4 @@
+import { Confetti } from '../components/Confetti'
 import { Timeline } from '../components/Timeline'
 import type { GameState } from '../game/types'
 import { TopBar } from './TopBar'
@@ -8,6 +9,7 @@ export function Win({ game, onAgain, onSetup }: { game: GameState; onAgain: () =
   const winner = game.players[game.winner ?? 0]
   return (
     <main className="wrap">
+      <Confetti />
       <TopBar game={game} />
       <div className="center">
         <p className="m-0 text-muted">{game.winReason === 'deck' ? 'Špil je potrošen' : 'Puna vremenska crta'}</p>

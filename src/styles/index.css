@@ -2,6 +2,7 @@
 @import "@fontsource-variable/unbounded";
 @import "@fontsource-variable/instrument-sans";
 @import "./tokens.css";
+@import "./motion.css";
 
 /* `inline` so utilities reference the runtime vars and follow the light/dark switch. */
 @theme inline {
@@ -104,7 +105,7 @@
   .deck.on .arm { transform: rotate(26deg); }
 
   /* Song cards + timeline */
-  .timeline { display: flex; align-items: stretch; overflow-x: auto; padding: 6px 2px 14px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+  .timeline { display: flex; align-items: stretch; overflow-x: auto; overflow-y: hidden; padding: 8px 2px 14px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
   .slot { flex: none; width: 44px; margin: 0 4px; border: 1.5px dashed var(--line); border-radius: 12px; background: transparent; color: var(--muted); font-size: 1.3rem; font-weight: 600; scroll-snap-align: center; }
   .slot:hover { border-color: var(--pink); color: var(--pink); }
   .card { flex: none; width: 132px; min-height: 150px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); overflow: hidden; display: flex; flex-direction: column; scroll-snap-align: center; margin: 0 2px; }

@@ -2,11 +2,14 @@ import { AnswerOptions } from '../components/AnswerOptions'
 import { MysteryCard } from '../components/Card'
 import { Timeline } from '../components/Timeline'
 import { Turntable } from '../components/Turntable'
+import { YearCounter } from '../components/YearCounter'
 import { BUY_COST, SKIP_COST } from '../game/engine'
 import { belongsText } from '../game/text'
 import type { Action, GameState } from '../game/types'
 import type { MusicError } from '../music/MusicProvider'
 import type { useMusic } from '../music/useMusic'
+import { useCardDrag } from '../hooks/useCardDrag'
+import { vibrate } from '../hooks/useReducedMotion'
 import { TopBar } from './TopBar'
 import { useFocusOnMount } from './useFocusOnMount'
 
@@ -43,6 +46,11 @@ function Listen({ game, music, dispatch }: Props) {
     music.stop()
     dispatch(a)
   }
+  const place = (slot: number | null) => {
+    if (slot !== null) vibrate(15)
+    dispatch({ type: 'place', slot })
+  }
+  const drag = useCardDrag(place)
 
   return (
     <main className="wrap">
@@ -58,7 +66,7 @@ function Listen({ game, music, dispatch }: Props) {
               Kartica je na crti
             </div>
           ) : (
-            <MysteryCard hint="Smjesti na crtu" />
+            <MysteryCard className="bob" hint="Povuci na crtu" onDragStart={drag} />
           )}
         </div>
 
@@ -88,9 +96,9 @@ function Listen({ game, music, dispatch }: Props) {
         <p className="mt-1 mb-2.5 text-[.95rem] text-muted">
           {placed
             ? 'Izaberi pjesmu pa otkrij godinu. Karticu možeš i premjestiti.'
-            : 'Dodirni + na mjestu gdje pjesma pripada. Crtu možeš listati prstom.'}
+            : 'Povuci tajnu karticu na crtu ili dodirni + na željenom mjestu. Crtu možeš listati prstom.'}
         </p>
-        <Timeline cards={player.cards} mode="place" slot={game.slot} onPlace={(slot) => dispatch({ type: 'place', slot })} />
+        <Timeline cards={player.cards} mode="place" slot={game.slot} onPlace={place} onDragStart={drag} />
       </section>
 
       <div className="bar">
@@ -111,26 +119,26 @@ function Reveal({ game, onNext }: { game: GameState; onNext: () => void }) {
 
   return (
     <main className="wrap">
-      <TopBar game={game} />
+      <TopBar game={game} popPlayer={r.tokenGained ? game.turn : undefined} />
       <section className="stage text-center">
         <h2 ref={heading} tabIndex={-1} className="outline-none">
-          <span className="big-year block">{m.year}</span>
+          <YearCounter year={m.year} delay={r.bought ? 150 : 1000} good={r.placedOk} />
           <span className="mt-1.5 block font-body text-[1.15rem] font-bold">{m.title}</span>
           <span className="block font-body text-base font-normal text-muted">{m.artist}</span>
         </h2>
 
-        <p className={`mt-4 font-bold ${r.placedOk ? 'text-teal' : 'text-bad'}`}>
+        <p className={`rise mt-4 font-bold ${r.placedOk ? 'text-teal' : 'text-bad'}`}>
           {r.bought ? 'Kartica kupljena.' : r.placedOk ? 'Točno mjesto! Kartica ostaje tvoja.' : 'Krivo mjesto, kartica ide van.'}
         </p>
-        {!r.placedOk && <p className="text-muted">{belongsText(player.cards, r.correctIndex)}</p>}
+        {!r.placedOk && <p className="rise text-muted">{belongsText(player.cards, r.correctIndex)}</p>}
 
         {!r.bought && (
           <>
-            <p className={`mt-2 font-bold ${r.guessedOk ? 'text-teal' : 'text-bad'}`}>
+            <p className={`rise mt-2 font-bold ${r.guessedOk ? 'text-teal' : 'text-bad'}`}>
               {!r.guessedOk ? 'Promašena pjesma.' : r.tokenGained ? 'Pogođena pjesma! +1 žeton' : 'Pogođena pjesma! Žetoni su već puni.'}
             </p>
             {!r.guessedOk && guess && (
-              <p className="text-muted">
+              <p className="rise text-muted">
                 Tvoj odgovor: {guess.artist}, {guess.title}
               </p>
             )}

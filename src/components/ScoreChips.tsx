@@ -3,7 +3,15 @@ import { MAX_TOKENS } from '../game/engine'
 import { tokensLabel } from '../game/text'
 import type { Player } from '../game/types'
 
-export function ScoreChips({ players, turn, target }: { players: Player[]; turn: number; target: number }) {
+interface Props {
+  players: Player[]
+  turn: number
+  target: number
+  /** Player whose newest token should pop (just earned). */
+  popPlayer?: number
+}
+
+export function ScoreChips({ players, turn, target, popPlayer }: Props) {
   const ref = useRef<HTMLUListElement>(null)
   // With many players or long names, keep the active player's chip on screen.
   useEffect(() => {
@@ -26,7 +34,12 @@ export function ScoreChips({ players, turn, target }: { players: Player[]; turn:
                 {p.cards.length}/{target} kartica
               </span>
               <span className="tracking-[1px] text-amber" role="img" aria-label={tokensLabel(p.tokens)}>
-                {'●'.repeat(p.tokens) + '○'.repeat(MAX_TOKENS - p.tokens)}
+                {Array.from({ length: MAX_TOKENS }, (_, k) => (
+                  // The token just earned pops in.
+                  <span key={k} className={i === popPlayer && k === p.tokens - 1 ? 'pop' : undefined}>
+                    {k < p.tokens ? '●' : '○'}
+                  </span>
+                ))}
               </span>
             </span>
           </span>

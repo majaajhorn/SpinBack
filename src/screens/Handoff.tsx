@@ -9,7 +9,7 @@ export function Handoff({ game, onReady }: { game: GameState; onReady: () => voi
       <TopBar game={game} />
       <div className="center">
         <p className="m-0 text-muted">Predaj uređaj igraču</p>
-        <h1 className="headline">{game.players[game.turn].name}</h1>
+        <h1 key={game.turn} className="headline handin">{game.players[game.turn].name}</h1>
         <button ref={button} className="btn-primary min-w-60" onClick={onReady}>
           Kreni
         </button>
