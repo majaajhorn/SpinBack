@@ -21,6 +21,8 @@ export type Phase = 'handoff' | 'listen' | 'reveal' | 'win'
 export interface TurnResult {
   placedOk: boolean
   guessedOk: boolean
+  /** False when the guess was right but tokens were already at the max. */
+  tokenGained: boolean
   bought: boolean
   /** Where the player put the card (null when bought). */
   slot: number | null

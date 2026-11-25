@@ -120,7 +120,7 @@ describe('turn flow', () => {
   it('correct placement and guess keeps the card and gives a token', () => {
     const s = listening([1970, 1990], 1980)
     const r = run(s, { type: 'place', slot: 1 }, { type: 'guess', songId: s.mystery!.id }, { type: 'reveal' })
-    expect(r.result).toMatchObject({ placedOk: true, guessedOk: true, correctIndex: 1 })
+    expect(r.result).toMatchObject({ placedOk: true, guessedOk: true, tokenGained: true, correctIndex: 1 })
     expect(r.players[0].cards.map((c) => c.year)).toEqual([1970, 1980, 1990])
     expect(r.players[0].tokens).toBe(START_TOKENS + 1)
   })
@@ -141,6 +141,7 @@ describe('turn flow', () => {
     expect(r1.players[0].tokens).toBe(MAX_TOKENS)
     const r2 = run(s, { type: 'place', slot: 1 }, { type: 'guess', songId: s.mystery!.id }, { type: 'reveal' })
     expect(r2.players[0].tokens).toBe(MAX_TOKENS)
+    expect(r2.result).toMatchObject({ guessedOk: true, tokenGained: false })
   })
 
   it('next passes the turn and goes to handoff with a new song', () => {

@@ -125,7 +125,7 @@ export function reduce(s: GameState, a: Action, ctx: Ctx): GameState {
       return {
         ...s, players, phase: 'reveal',
         discard: placedOk ? s.discard : [...s.discard, m],
-        result: { placedOk, guessedOk, bought: false, slot: s.slot, correctIndex: ci },
+        result: { placedOk, guessedOk, tokenGained: guessedOk && p.tokens < MAX_TOKENS, bought: false, slot: s.slot, correctIndex: ci },
       }
     }
 
@@ -153,7 +153,7 @@ export function reduce(s: GameState, a: Action, ctx: Ctx): GameState {
       }))
       return {
         ...s, players, phase: 'reveal',
-        result: { placedOk: true, guessedOk: false, bought: true, slot: null, correctIndex: ci },
+        result: { placedOk: true, guessedOk: false, tokenGained: false, bought: true, slot: null, correctIndex: ci },
       }
     }
 
