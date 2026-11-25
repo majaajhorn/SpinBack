@@ -136,6 +136,13 @@ export function reduce(s: GameState, a: Action, ctx: Ctx): GameState {
       return next.phase === 'win' ? next : { ...next, phase: 'listen' }
     }
 
+    case 'unavailable': {
+      // No playable clip: drop the song (not to discard, it would fail again) and draw another.
+      if ((s.phase !== 'listen' && s.phase !== 'handoff') || !m) return s
+      const next = drawMystery(s, ctx)
+      return next.phase === 'win' ? next : { ...next, phase: s.phase }
+    }
+
     case 'buy': {
       if (s.phase !== 'listen' || !m || p.tokens < BUY_COST) return s
       const ci = correctIndex(p.cards, m.year)

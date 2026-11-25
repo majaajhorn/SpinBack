@@ -52,6 +52,8 @@ export type Action =
   | { type: 'guess'; songId: string }
   | { type: 'reveal' }
   | { type: 'skip' }
+  /** The mystery song has no playable clip; replace it without cost. */
+  | { type: 'unavailable' }
   | { type: 'buy' }
   | { type: 'next' }
 

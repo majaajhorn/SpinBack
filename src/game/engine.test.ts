@@ -189,6 +189,16 @@ describe('tokens', () => {
     const s = listening([1970], 1980, BUY_COST - 1)
     expect(run(s, { type: 'buy' })).toBe(s)
   })
+
+  it('unavailable song is replaced for free and leaves the game', () => {
+    const s = listening([1970], 1980, 0)
+    const r = run(s, { type: 'unavailable' })
+    expect(r.phase).toBe('listen')
+    expect(r.players[0].tokens).toBe(0)
+    expect(r.mystery).not.toBe(s.mystery)
+    expect(r.discard).not.toContain(s.mystery)
+    expect(run({ ...s, phase: 'handoff' }, { type: 'unavailable' }).phase).toBe('handoff')
+  })
 })
 
 describe('running out of songs', () => {
