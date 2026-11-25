@@ -39,6 +39,8 @@
     height: 100%;
     /* No pull-to-refresh or scroll chaining: an accidental reload would end the game. */
     overscroll-behavior: none;
+    /* Scrolling into view keeps cards clear of the fixed bottom bar. */
+    scroll-padding-bottom: 110px;
   }
   body {
     min-height: 100%;
@@ -110,7 +112,7 @@
   .deck.on .arm { transform: rotate(26deg); }
 
   /* Song cards + timeline */
-  .timeline { display: flex; align-items: stretch; overflow-x: auto; overflow-y: hidden; padding: 8px 2px 14px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
+  .timeline { display: flex; align-items: stretch; text-align: left; overflow-x: auto; overflow-y: hidden; padding: 8px 2px 14px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
   .slot { flex: none; width: 44px; margin: 0 4px; border: 1.5px dashed var(--line); border-radius: 12px; background: transparent; color: var(--muted); font-size: 1.3rem; font-weight: 600; scroll-snap-align: center; }
   .slot:hover { border-color: var(--pink); color: var(--pink); }
   .card { flex: none; width: 132px; min-height: 150px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); overflow: hidden; display: flex; flex-direction: column; scroll-snap-align: center; margin: 0 2px; }
@@ -141,6 +143,9 @@
     .vinyl { width: 128px; height: 128px; }
     .arm { height: 90px; }
     .arm::after { height: 68px; box-shadow: -3px 62px 0 2px var(--muted); }
+    /* Smaller stage card so the timeline stays in view on phones. */
+    .stage .card { width: 112px; min-height: 128px; }
+    .stage .card.mystery .q { font-size: 2.4rem; }
   }
 }
 

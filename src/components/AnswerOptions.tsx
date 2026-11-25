@@ -10,7 +10,7 @@ export function AnswerOptions({
   onSelect: (id: string) => void
 }) {
   return (
-    <fieldset className="mt-4">
+    <fieldset className="mt-3">
       <legend className="mb-2 font-semibold">Tko pjeva?</legend>
       <div className="grid grid-cols-2 gap-2">
         {options.map((o) => (

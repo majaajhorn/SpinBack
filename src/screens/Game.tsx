@@ -56,13 +56,13 @@ function Listen({ game, music, dispatch }: Props) {
     <main className="wrap">
       <TopBar game={game} />
       <section className="stage" aria-label="Pozornica">
-        <p ref={heading} tabIndex={-1} className="mb-3 text-[1.05rem] outline-none">
+        <p ref={heading} tabIndex={-1} className="mb-3 text-[1.05rem] outline-none max-[480px]:mb-2">
           Na redu je <strong className="font-display font-bold">{player.name}</strong>
         </p>
         <div className="flex items-center justify-center gap-7 max-[480px]:gap-4">
           <Turntable playing={playing} />
           {placed ? (
-            <div className="flex min-h-[150px] w-[132px] items-center justify-center rounded-[14px] border-2 border-dashed border-line p-2.5 text-center text-[.85rem] text-muted">
+            <div className="flex min-h-[150px] w-[132px] max-[480px]:min-h-[128px] max-[480px]:w-[112px] items-center justify-center rounded-[14px] border-2 border-dashed border-line p-2.5 text-center text-[.85rem] text-muted">
               Kartica je na crti
             </div>
           ) : (
@@ -73,19 +73,19 @@ function Listen({ game, music, dispatch }: Props) {
         <button className="btn-play mt-4 w-full" onClick={playing ? music.stop : music.play} disabled={music.status === 'loading'}>
           {music.status === 'loading' ? 'Učitavam…' : playing ? '■ Zaustavi' : '▶ Pusti isječak'}
         </button>
-        <p className="mt-2 min-h-[1.5em] text-center text-[.9rem] text-muted" role="status">
+        <p className="mt-2 text-center text-[.9rem] text-muted" role="status">
           {music.error && MUSIC_ERROR[music.error]}
         </p>
 
         {placed ? (
           <AnswerOptions options={game.options} selected={game.guess} onSelect={(id) => dispatch({ type: 'guess', songId: id })} />
         ) : (
-          <div className="mt-2 flex gap-2">
+          <div className="mt-3 flex gap-2">
             <button className="btn-secondary flex-1 text-[.9rem]" disabled={player.tokens < SKIP_COST} onClick={() => act({ type: 'skip' })}>
-              Preskoči (1 žeton)
+              Preskoči <span className="block text-[.8rem] font-normal text-muted">1 žeton</span>
             </button>
             <button className="btn-secondary flex-1 text-[.9rem]" disabled={player.tokens < BUY_COST} onClick={() => act({ type: 'buy' })}>
-              Kupi karticu (3 žetona)
+              Kupi karticu <span className="block text-[.8rem] font-normal text-muted">3 žetona</span>
             </button>
           </div>
         )}
