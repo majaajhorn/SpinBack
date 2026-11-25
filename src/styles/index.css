@@ -92,8 +92,17 @@
   .bar > * { max-width: 724px; margin: 0 auto; }
 
   /* Score chips */
-  .chip { flex: none; display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px 6px 6px; }
+  /* Scrollable row; the right edge fades so a cut-off chip reads as "more this way", not a glitch. */
+  .chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none;
+    mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
+  .chips::-webkit-scrollbar { display: none; }
+  .chips > :last-child { margin-right: 28px; }
+  .chip { flex: none; display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px 6px 6px; min-width: 0; }
   .chip.active { border-color: var(--pink); box-shadow: 0 0 0 2px var(--pink) inset; }
+  /* Token dots drawn in CSS: font glyphs ● and ○ render at different sizes. */
+  .tokens { display: inline-flex; align-items: center; gap: 3px; }
+  .token { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--amber); }
+  .token.on { background: var(--amber); }
   .avatar { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--bg); font-weight: 700; font-size: .85rem; }
 
   /* Stage + turntable */

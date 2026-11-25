@@ -21,24 +21,22 @@ export function ScoreChips({ players, turn, target, popPlayer }: Props) {
   }, [turn])
 
   return (
-    <ul ref={ref} className="flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none]" aria-label="Igrači">
+    <ul ref={ref} className="chips" aria-label="Igrači">
       {players.map((p, i) => (
         <li key={i} className={`chip ${i === turn ? 'active' : ''}`} aria-current={i === turn ? 'true' : undefined}>
           <span className="avatar" aria-hidden="true">
             {p.name.trim()[0]?.toUpperCase() ?? '?'}
           </span>
-          <span className="leading-tight">
-            <b className="block font-semibold">{p.name}</b>
-            <span className="flex gap-2 text-[.85rem]">
-              <span className="text-muted tabular-nums">
-                {p.cards.length}/{target} kartica
+          <span className="min-w-0 leading-tight">
+            <b className="block max-w-[8.5rem] truncate font-semibold">{p.name}</b>
+            <span className="flex gap-1.5 text-[.85rem]">
+              <span className="text-muted tabular-nums" aria-label={`${p.cards.length} od ${target} kartica`}>
+                {p.cards.length}/{target}
               </span>
-              <span className="tracking-[1px] text-amber" role="img" aria-label={tokensLabel(p.tokens)}>
+              <span className="tokens" role="img" aria-label={tokensLabel(p.tokens)}>
                 {Array.from({ length: MAX_TOKENS }, (_, k) => (
                   // The token just earned pops in.
-                  <span key={k} className={i === popPlayer && k === p.tokens - 1 ? 'pop' : undefined}>
-                    {k < p.tokens ? '●' : '○'}
-                  </span>
+                  <span key={k} className={`token ${k < p.tokens ? 'on' : ''} ${i === popPlayer && k === p.tokens - 1 ? 'pop' : ''}`} />
                 ))}
               </span>
             </span>

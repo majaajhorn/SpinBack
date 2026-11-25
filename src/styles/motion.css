@@ -33,7 +33,7 @@ body.dragging .slot { width: 58px; border-color: var(--pink); color: var(--pink)
 @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
 
 /* Token earned, player name on handoff, winning timeline. */
-.pop { display: inline-block; animation: pop .6s .2s both; }
+.pop { animation: pop .6s .2s both; }
 @keyframes pop { 0% { transform: scale(0); } 60% { transform: scale(1.7); } 100% { transform: scale(1); } }
 .handin { animation: handin .7s cubic-bezier(.2,.9,.2,1) both; }
 @keyframes handin { from { opacity: 0; letter-spacing: .25em; transform: translateY(16px); } }
