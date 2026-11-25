@@ -2,10 +2,18 @@
 <html lang="hr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+    <!-- Overridden at runtime when the player picks a theme (see src/theme.ts). -->
     <meta name="theme-color" content="#E4EDE8" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#101928" media="(prefers-color-scheme: dark)" />
+    <!-- iOS home screen: full screen, content runs under the status bar (body pads by safe-area). -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SpinBack" />
     <meta name="description" content="Glazbena party igra: smjesti pjesmu na svoju vremensku crtu." />
     <title>SpinBack</title>
   </head>

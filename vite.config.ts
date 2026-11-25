@@ -8,11 +8,13 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    // shortcut: no PNG icons yet, app is not installable until Phase 6 adds them
     VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg'],
+      // Ask before updating: a silent reload would wipe a game in progress.
+      registerType: 'prompt',
+      includeAssets: ['favicon.svg', 'favicon.ico', 'apple-touch-icon-180x180.png'],
       manifest: {
+        id: '/',
+        start_url: '/',
         name: 'SpinBack',
         short_name: 'SpinBack',
         description: 'Glazbena party igra: smjesti pjesmu na svoju vremensku crtu.',
@@ -20,10 +22,19 @@ export default defineConfig({
         theme_color: '#E4EDE8',
         background_color: '#E4EDE8',
         display: 'standalone',
-        icons: [{ src: 'favicon.svg', sizes: 'any', type: 'image/svg+xml' }],
+        orientation: 'portrait',
+        categories: ['games', 'music', 'entertainment'],
+        // Generated from public/favicon.svg by `npm run generate-pwa-assets`.
+        icons: [
+          { src: 'pwa-64x64.png', sizes: '64x64', type: 'image/png' },
+          { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png' },
+          { src: 'maskable-icon-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+        ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,woff2}'],
+        // App shell plus the song database (bundled into the JS). Clips always need the network.
+        globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
         // Croatian/ex-YU text needs only latin + latin-ext font subsets offline.
         globIgnores: ['**/*-{cyrillic,cyrillic-ext,greek,vietnamese}-*'],
       },

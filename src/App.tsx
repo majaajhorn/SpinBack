@@ -1,5 +1,6 @@
 import { useReducer, useState } from 'react'
 import { flushSync } from 'react-dom'
+import { AppNotices } from './components/AppNotices'
 import { prefersReducedMotion } from './hooks/useReducedMotion'
 import songs from './data/songs.json'
 import { reduce, startGame } from './game/engine'
@@ -38,8 +39,18 @@ export default function App() {
   }
   const start = () => act({ type: 'start', names, target })
 
-  if (!game) return <Setup names={names} target={target} onNames={setNames} onTarget={setTarget} onStart={start} />
-  if (game.phase === 'handoff') return <Handoff game={game} onReady={() => act({ type: 'ready' })} />
-  if (game.phase === 'win') return <Win game={game} onAgain={start} onSetup={() => act({ type: 'setup' })} />
-  return <Game game={game} music={music} dispatch={act} />
+  return (
+    <>
+      <AppNotices />
+      {!game ? (
+        <Setup names={names} target={target} onNames={setNames} onTarget={setTarget} onStart={start} />
+      ) : game.phase === 'handoff' ? (
+        <Handoff game={game} onReady={() => act({ type: 'ready' })} />
+      ) : game.phase === 'win' ? (
+        <Win game={game} onAgain={start} onSetup={() => act({ type: 'setup' })} />
+      ) : (
+        <Game game={game} music={music} dispatch={act} />
+      )}
+    </>
+  )
 }
