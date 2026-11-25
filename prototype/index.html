@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SpinBack – prototip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E4EDE8; --surface:#F8FBF9; --ink:#18233D; --muted:#55627A; --line:#C5D2CC;
+  --pink:#D23C70; --amber:#EFAB30; --teal:#1B7C7D; --bad:#C2364A;
+  --vinyl:#1A1F2C; --groove:#2C3344; --on-accent:#FFFFFF;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --display:"Unbounded", "Arial Black", system-ui, sans-serif;
+  --body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#101928; --surface:#19243A; --ink:#EDF1F7; --muted:#A1ADC3; --line:#2D3A55;
+    --pink:#EE6293; --amber:#F4BD55; --teal:#3CB1AE; --bad:#F0697A;
+    --vinyl:#05070C; --groove:#1C2232; --on-accent:#101928;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101928; --surface:#19243A; --ink:#EDF1F7; --muted:#A1ADC3; --line:#2D3A55;
+  --pink:#EE6293; --amber:#F4BD55; --teal:#3CB1AE; --bad:#F0697A;
+  --vinyl:#05070C; --groove:#1C2232; --on-accent:#101928;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit;cursor:pointer}
+button:disabled{cursor:not-allowed;opacity:.45}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+h1,h2{font-family:var(--display);margin:0}
+.wrap{max-width:760px;margin:0 auto;padding:20px 18px 120px}
+
+/* Setup */
+.brand{padding:28px 0 18px}
+.brand h1{font-size:clamp(2.6rem,11vw,4.6rem);font-weight:800;letter-spacing:-.03em;line-height:.95}
+.brand h1 span{display:inline-block}
+.brand p{margin:14px 0 0;max-width:34ch;color:var(--muted);font-size:1.05rem}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;margin:16px 0}
+.panel h2{font-size:1rem;font-weight:700;margin-bottom:12px}
+.prow{display:flex;gap:8px;margin-bottom:8px}
+.prow input{flex:1;min-width:0;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:11px 14px}
+.icon{width:46px;border:1px solid var(--line);background:transparent;border-radius:12px;font-size:1.2rem}
+.ghostbtn{border:1.5px dashed var(--line);background:transparent;border-radius:12px;padding:10px 14px;width:100%;color:var(--muted);font-weight:600}
+.seg{display:flex;gap:8px}
+.seg button{flex:1;border:1px solid var(--line);background:var(--bg);border-radius:12px;padding:12px 0;font-family:var(--display);font-weight:700}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.primary{display:block;width:100%;border:0;border-radius:16px;padding:16px;background:var(--pink);color:var(--on-accent);font-weight:700;font-size:1.05rem}
+.secondary{border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:12px 16px;font-weight:600}
+.rules{margin-top:18px;color:var(--muted)}
+.rules summary{cursor:pointer;font-weight:600;color:var(--ink);padding:6px 0}
+.rules ol{padding-left:1.2em;margin:8px 0}
+.rules li{margin:6px 0}
+.note{font-size:.9rem;color:var(--muted);border-left:3px solid var(--amber);padding-left:12px;margin-top:20px}
+
+/* Game */
+.scores{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:14px}
+.chip{flex:none;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 6px}
+.chip.active{border-color:var(--pink);box-shadow:0 0 0 2px var(--pink) inset}
+.av{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--bg);font-weight:700;font-size:.85rem}
+.chip b{font-weight:600}
+.chip small{color:var(--muted);font-variant-numeric:tabular-nums}
+.dots{letter-spacing:1px;color:var(--amber)}
+
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:20px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.turn{grid-column:1/-1;margin:0;font-size:1.05rem}
+.turn strong{font-family:var(--display);font-weight:700}
+.vinyl{width:148px;height:148px;border-radius:50%;position:relative;
+  background:repeating-radial-gradient(circle at center,var(--vinyl) 0 2px,var(--groove) 2px 3px);
+  box-shadow:0 10px 24px -12px rgba(0,0,0,.6)}
+.vinyl::after{content:"";position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 30deg,transparent 0 12%,rgba(255,255,255,.12) 16%,transparent 22% 62%,rgba(255,255,255,.08) 66%,transparent 72%)}
+.vinyl .label{position:absolute;inset:34%;border-radius:50%;background:var(--pink);display:grid;place-items:center;font-family:var(--display);font-weight:800;color:#fff;font-size:1.5rem}
+.vinyl .label::after{content:"";position:absolute;width:8px;height:8px;border-radius:50%;background:var(--vinyl)}
+.vinyl.spinning{animation:spin 1.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.vinyl.spinning{animation:none}}
+.controls{display:flex;flex-direction:column;gap:10px}
+.play{border:0;border-radius:14px;padding:13px 16px;background:var(--ink);color:var(--bg);font-weight:700;text-align:left}
+.peek{border:1px dashed var(--line);background:transparent;border-radius:14px;padding:11px 16px;color:var(--muted);font-weight:600;text-align:left;user-select:none;-webkit-user-select:none;touch-action:none}
+.peekbox{min-height:2.8em;font-size:.95rem}
+.peekbox[hidden]{display:block;visibility:hidden}
+.peekbox b{display:block}
+.tokenacts{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap}
+.tokenacts button{flex:1;min-width:150px}
+
+.result{grid-column:1/-1;text-align:center;padding:4px 0}
+.verdict{font-weight:700;font-size:1.05rem}
+.verdict.ok{color:var(--teal)}
+.verdict.no{color:var(--bad)}
+.bigyear{font-family:var(--display);font-weight:800;font-size:clamp(3.5rem,18vw,6rem);line-height:1;margin:6px 0;letter-spacing:-.04em}
+.song b{display:block;font-size:1.15rem}
+.song span{color:var(--muted)}
+.explain{color:var(--muted);margin:10px 0 0}
+.ask{margin:18px 0 10px;font-weight:600}
+.askrow{display:flex;gap:10px}
+.askrow button{flex:1}
+
+.line{margin-top:22px}
+.line h2{font-size:1rem;font-weight:700}
+.hint{margin:4px 0 10px;color:var(--muted);font-size:.95rem}
+.timeline{display:flex;align-items:stretch;overflow-x:auto;padding:6px 2px 14px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.slot{flex:none;width:38px;margin:0 4px;border:1.5px dashed var(--line);border-radius:12px;background:transparent;color:var(--muted);font-size:1.3rem;font-weight:600;scroll-snap-align:center}
+.slot:hover{border-color:var(--pink);color:var(--pink)}
+.card{flex:none;width:132px;min-height:150px;border-radius:14px;background:var(--surface);border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column;scroll-snap-align:center;margin:0 2px}
+.card .yr{background:var(--c);color:#fff;font-family:var(--display);font-weight:800;font-size:1.45rem;padding:10px 12px 8px;letter-spacing:-.02em;text-shadow:0 1px 0 rgba(0,0,0,.18)}
+.card .ti{padding:10px 12px 2px;font-weight:700;font-size:.92rem;line-height:1.25}
+.card .ar{padding:0 12px 12px;color:var(--muted);font-size:.82rem;line-height:1.3}
+.card.mystery{border:2px solid var(--pink);margin:0 6px}
+.card.mystery .yr{background:var(--pink)}
+.card.new{box-shadow:0 0 0 3px var(--teal)}
+.card.wrong{opacity:.75;border:2px dashed var(--bad);margin:0 6px}
+.card.wrong .yr{background:var(--bad)}
+.unplace{display:block;margin:auto 12px 12px;border:0;background:transparent;color:var(--pink);font-weight:600;font-size:.85rem;padding:0;text-align:left}
+
+.bar{position:fixed;left:0;right:0;bottom:0;padding:12px 18px calc(12px + env(safe-area-inset-bottom,0px));background:linear-gradient(to top,var(--bg) 70%,transparent)}
+.bar .inner{max-width:760px;margin:0 auto}
+
+.center{min-height:80vh;display:grid;place-content:center;text-align:center;gap:18px;padding:20px}
+.center h1{font-size:clamp(2rem,9vw,3.4rem);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+.center p{color:var(--muted);margin:0}
+.center .primary{min-width:240px}
+.winline{max-width:100%}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+@media (max-width:480px){
+  .stage{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .controls{width:100%}
+  .play,.peek{text-align:center}
+  .vinyl{width:128px;height:128px}
+  .stage .deckrow{width:100%}
+}
+
+/* ---------- Pokret i povlačenje ---------- */
+.deckrow{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:28px}
+.deck{position:relative;width:170px;height:150px;flex:none}
+.deck .vinyl{position:absolute;left:0;top:0}
+.arm{position:absolute;right:2px;top:-4px;width:12px;height:118px;transform-origin:6px 8px;transform:rotate(-28deg);transition:transform .7s cubic-bezier(.3,1.25,.5,1)}
+.arm::before{content:"";position:absolute;left:0;top:0;width:12px;height:12px;border-radius:50%;background:var(--muted)}
+.arm::after{content:"";position:absolute;left:4px;top:8px;width:4px;height:100px;border-radius:2px;background:var(--muted);box-shadow:-3px 96px 0 2px var(--muted)}
+.deck.on .arm{transform:rotate(4deg)}
+.card.back{background:var(--pink);border:0;color:#fff;align-items:center;justify-content:center;gap:6px;position:relative;
+  background-image:repeating-radial-gradient(circle at 50% 46%,rgba(255,255,255,.0) 0 7px,rgba(255,255,255,.09) 7px 8px)}
+.card.back .q{font-family:var(--display);font-weight:800;font-size:3rem;line-height:1}
+.card.back .hh{font-size:.8rem;font-weight:600;opacity:.9}
+[data-drag]{touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+.mwrap .card.back{animation:bob 2.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(2deg)}}
+.lifted{opacity:.25;animation:none!important}
+.outline{width:132px;min-height:150px;border:2px dashed var(--line);border-radius:14px;display:grid;place-items:center;color:var(--muted);font-size:.85rem;text-align:center;padding:10px}
+.dragghost{position:fixed;left:0;top:0;z-index:50;pointer-events:none;margin:0!important;box-shadow:0 22px 40px -14px rgba(0,0,0,.55);cursor:grabbing}
+body.dragging{cursor:grabbing}
+body.dragging .slot{width:58px;border-color:var(--pink);color:var(--pink)}
+.slot{transition:width .25s ease,background .15s,border-color .15s,color .15s}
+.slot.hot{background:var(--pink);color:#fff;border-style:solid;width:96px!important}
+.card.mystery[data-drag]{background-image:none}
+.dropin{animation:dropin .45s cubic-bezier(.3,1.5,.5,1) both}
+@keyframes dropin{from{transform:translateY(-26px) scale(1.12);opacity:.4}}
+
+.flipwrap{flex:none;perspective:900px;margin:0 6px;width:132px}
+.flipper{position:relative;transform-style:preserve-3d;animation:flip .75s .15s both cubic-bezier(.3,1.35,.5,1)}
+@keyframes flip{from{transform:rotateY(180deg)}to{transform:rotateY(0)}}
+.flipper>.card{margin:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flipper>.card.back{position:absolute;inset:0;transform:rotateY(180deg)}
+.flipwrap.ok .flipper>.card:first-child{animation:glow 1.1s 1s both}
+@keyframes glow{0%{box-shadow:0 0 0 0 var(--teal)}40%{box-shadow:0 0 0 7px var(--teal)}100%{box-shadow:0 0 0 3px var(--teal)}}
+.flipwrap.fall{animation:shake .4s 1s both,fall .55s 1.45s forwards}
+@keyframes shake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+@keyframes fall{to{transform:translateY(70px) rotate(14deg);opacity:0;width:0;margin:0}}
+.ghostwrap{flex:none;overflow:hidden;width:136px;animation:ghostin .5s 1.9s both}
+.ghostwrap .card{margin:0 2px}
+@keyframes ghostin{from{width:0;opacity:0}}
+.verdict,.ask,.askrow,.explain,.next1{animation:rise .45s 1.05s both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.bigyear{font-variant-numeric:tabular-nums}
+.dots i{font-style:normal;display:inline-block}
+.dots i.pop{animation:pop .6s .2s both}
+@keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.7)}100%{transform:scale(1)}}
+.handname{animation:handin .7s cubic-bezier(.2,.9,.2,1) both}
+@keyframes handin{from{opacity:0;letter-spacing:.25em;transform:translateY(16px)}}
+.winline .card{animation:rise .4s both;animation-delay:calc(var(--k)*70ms)}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:60}
+::view-transition-old(root){animation:vt-out .22s ease both}
+::view-transition-new(root){animation:vt-in .38s cubic-bezier(.2,.8,.2,1) both}
+@keyframes vt-out{to{opacity:0;transform:translateX(-28px)}}
+@keyframes vt-in{from{opacity:0;transform:translateX(28px)}}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after,::view-transition-old(root),::view-transition-new(root){animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+@media (max-width:480px){
+  .deckrow{gap:16px}
+  .deck{width:140px;height:130px}
+  .arm{height:100px}
+  .arm::after{height:84px;box-shadow:-3px 80px 0 2px var(--muted)}
+}
+
+/* kompaktniji raspored */
+.stage{position:relative;gap:16px}
+.controls{flex-direction:row}
+.controls .play,.controls .peek{flex:1;text-align:center}
+.peekbox{position:absolute;left:14px;right:14px;top:12px;z-index:3;background:var(--ink);color:var(--bg);border-radius:14px;padding:12px 16px;min-height:0;box-shadow:0 12px 30px -12px rgba(0,0,0,.5)}
+.peekbox[hidden]{display:none!important}
+.tokenacts button{min-width:0;font-size:.9rem;padding:10px 12px}
+.deck{width:178px}
+.arm{right:0;transform:rotate(0deg)}
+.deck.on .arm{transform:rotate(26deg)}
+@media (max-width:480px){
+  .deck{width:150px;height:130px}
+  .stage{padding:16px}
+  .arm{height:90px}
+  .arm::after{height:68px;box-shadow:-3px 62px 0 2px var(--muted)}
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+// Godine su originalne godine izlaska snimke.
+const SONGS = [
+  [1954,"Bill Haley & His Comets","Rock Around the Clock"],
+  [1957,"Elvis Presley","Jailhouse Rock"],
+  [1958,"Chuck Berry","Johnny B. Goode"],
+  [1961,"Ben E. King","Stand by Me"],
+  [1963,"The Beatles","I Want to Hold Your Hand"],
+  [1964,"The Kinks","You Really Got Me"],
+  [1965,"The Rolling Stones","(I Can’t Get No) Satisfaction"],
+  [1966,"The Beach Boys","Good Vibrations"],
+  [1967,"Aretha Franklin","Respect"],
+  [1967,"The Doors","Light My Fire"],
+  [1968,"Simon & Garfunkel","Mrs. Robinson"],
+  [1969,"Led Zeppelin","Whole Lotta Love"],
+  [1970,"Simon & Garfunkel","Bridge over Troubled Water"],
+  [1971,"John Lennon","Imagine"],
+  [1972,"Deep Purple","Smoke on the Water"],
+  [1973,"Pink Floyd","Money"],
+  [1974,"ABBA","Waterloo"],
+  [1975,"Queen","Bohemian Rhapsody"],
+  [1976,"ABBA","Dancing Queen"],
+  [1977,"Fleetwood Mac","Dreams"],
+  [1977,"Bee Gees","Stayin’ Alive"],
+  [1978,"Gloria Gaynor","I Will Survive"],
+  [1978,"Bob Marley & The Wailers","Is This Love"],
+  [1979,"Michael Jackson","Don’t Stop ’Til You Get Enough"],
+  [1980,"AC/DC","Back in Black"],
+  [1980,"Queen","Another One Bites the Dust"],
+  [1981,"Journey","Don’t Stop Believin’"],
+  [1982,"Toto","Africa"],
+  [1982,"Survivor","Eye of the Tiger"],
+  [1983,"Eurythmics","Sweet Dreams (Are Made of This)"],
+  [1983,"Cyndi Lauper","Girls Just Want to Have Fun"],
+  [1983,"The Police","Every Breath You Take"],
+  [1984,"Prince","Purple Rain"],
+  [1984,"Madonna","Like a Virgin"],
+  [1985,"Dire Straits","Money for Nothing"],
+  [1985,"Kate Bush","Running Up That Hill"],
+  [1986,"Bon Jovi","Livin’ on a Prayer"],
+  [1987,"Whitney Houston","I Wanna Dance with Somebody"],
+  [1987,"U2","With or Without You"],
+  [1988,"Bobby McFerrin","Don’t Worry, Be Happy"],
+  [1989,"Roxette","The Look"],
+  [1990,"MC Hammer","U Can’t Touch This"],
+  [1991,"Nirvana","Smells Like Teen Spirit"],
+  [1991,"R.E.M.","Losing My Religion"],
+  [1992,"Whitney Houston","I Will Always Love You"],
+  [1993,"Haddaway","What Is Love"],
+  [1993,"Ace of Base","The Sign"],
+  [1995,"Oasis","Wonderwall"],
+  [1995,"Coolio","Gangsta’s Paradise"],
+  [1996,"Spice Girls","Wannabe"],
+  [1998,"Britney Spears","…Baby One More Time"],
+  [1999,"Backstreet Boys","I Want It That Way"],
+  [2002,"Eminem","Lose Yourself"],
+  [2002,"Coldplay","Clocks"],
+  [2003,"Beyoncé","Crazy in Love"],
+  [2003,"OutKast","Hey Ya!"],
+  [2003,"The Killers","Mr. Brightside"],
+  [2006,"Gnarls Barkley","Crazy"],
+  [2007,"Rihanna","Umbrella"],
+  [2008,"Lady Gaga","Poker Face"],
+  [2009,"The Black Eyed Peas","I Gotta Feeling"],
+  [2010,"Adele","Rolling in the Deep"],
+  [2011,"Gotye","Somebody That I Used to Know"],
+  [2013,"Daft Punk","Get Lucky"],
+  [2013,"Pharrell Williams","Happy"],
+  [2014,"Mark Ronson ft. Bruno Mars","Uptown Funk"],
+  [2017,"Ed Sheeran","Shape of You"],
+  [2019,"Billie Eilish","Bad Guy"],
+  [2019,"The Weeknd","Blinding Lights"],
+  [2020,"Dua Lipa","Levitating"],
+  [2022,"Harry Styles","As It Was"],
+  [2023,"Miley Cyrus","Flowers"]
+];
+const DECADE = {1950:"#5E8F80",1960:"#C9922A",1970:"#C8642F",1980:"#C93468",1990:"#6E52C8",2000:"#2A7FBF",2010:"#178C80",2020:"#6F8A22"};
+const colorFor = y => DECADE[Math.floor(y/10)*10] || "#55627A";
+const START_TOKENS = 2, MAX_TOKENS = 5;
+
+let S = { phase:"setup", names:["",""], target:7 };
+let G = null;
+
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const shuffle = a => { for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; };
+const initial = n => esc((n.trim()[0]||"?").toUpperCase());
+
+function startGame(){
+  const names = S.names.map((n,i)=>n.trim()||`Igrač ${i+1}`);
+  const deck = shuffle(SONGS.map((s,i)=>({id:i,year:s[0],artist:s[1],title:s[2]})));
+  G = { deck, discard:[], turn:0, mystery:null, slot:null, result:null,
+        players: names.map(name=>({name, cards:[deck.pop()], tokens:START_TOKENS})) };
+  draw();
+  S.phase = "handoff";
+  go(render);
+}
+function cur(){ return G.players[G.turn]; }
+function draw(){
+  stopAudio();
+  if(!G.deck.length){ G.deck = shuffle(G.discard); G.discard = []; }
+  G.mystery = G.deck.pop() || null;
+  G.slot = null; G.result = null;
+  if(!G.mystery) endByEmptyDeck();
+}
+function endByEmptyDeck(){
+  const best = [...G.players].sort((a,b)=>b.cards.length-a.cards.length)[0];
+  G.winner = best; S.phase = "win";
+}
+function correctIndex(cards, y){ let i=0; while(i<cards.length && cards[i].year<=y) i++; return i; }
+
+function reveal(){
+  stopAudio();
+  const p = cur(), c = p.cards, m = G.mystery, i = G.slot;
+  const L = c[i-1], R = c[i];
+  const ok = (!L || L.year<=m.year) && (!R || m.year<=R.year);
+  const ci = correctIndex(c, m.year);
+  G.result = { ok, ci, slot:i, neighbours:[c[ci-1], c[ci]] };
+  if(ok) c.splice(i,0,m); else G.discard.push(m);
+  S.phase = "reveal";
+  render();
+}
+function buyCard(){
+  const p = cur(); if(p.tokens<3) return;
+  stopAudio();
+  p.tokens -= 3;
+  const ci = correctIndex(p.cards, G.mystery.year);
+  p.cards.splice(ci,0,G.mystery);
+  G.result = { ok:true, bought:true, ci };
+  S.phase = "reveal";
+  render();
+}
+function skipSong(){
+  const p = cur(); if(p.tokens<1) return;
+  p.tokens -= 1;
+  G.discard.push(G.mystery);
+  draw();
+  render();
+}
+function finishTurn(gotTitle){
+  const p = cur();
+  G.tokenPop = null;
+  if(gotTitle && p.tokens<MAX_TOKENS){ p.tokens++; G.tokenPop = G.turn; }
+  if(p.cards.length >= S.target){ G.winner = p; S.phase = "win"; go(render); return; }
+  G.turn = (G.turn+1) % G.players.length;
+  draw();
+  if(S.phase!=="win") S.phase = "handoff";
+  go(render);
+}
+
+/* ---------- Simulirani zvuk (zamjena za Deezer isječak) ---------- */
+let actx=null, master=null, playing=false, stopTimer=null;
+function rng(seed){ return function(){ seed|=0; seed=seed+0x6D2B79F5|0; let t=Math.imul(seed^seed>>>15,1|seed); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+function playSong(song){
+  try{
+    actx = actx || new (window.AudioContext||window.webkitAudioContext)();
+    actx.resume();
+  }catch(e){ return; }
+  stopAudio();
+  const r = rng(song.id*7919 + song.year);
+  const dec = Math.floor(song.year/10)*10;
+  const wave = dec<1970 ? "triangle" : dec<1980 ? "square" : dec<1990 ? "sawtooth" : dec<2000 ? "square" : "triangle";
+  const bpm = 84 + Math.floor(r()*56) + (dec===1980?10:0);
+  const beat = 60/bpm, step = beat/2;
+  const root = 196 * Math.pow(2, Math.floor(r()*7)/12);
+  const scale = [0,2,4,7,9,12,14,16];
+  const motif = Array.from({length:8},()=> r()<0.8 ? scale[Math.floor(r()*scale.length)] : null);
+  const bassLine = [0,0,5,7].map(x=>x);
+  master = actx.createGain(); master.gain.value = 0.18; master.connect(actx.destination);
+  const t0 = actx.currentTime + 0.05, dur = 30;
+  let n = 0;
+  for(let t=t0; t<t0+dur; t+=step, n++){
+    const note = motif[(n + (Math.floor(n/16)%2)*2) % 8];
+    if(note!==null) tone(root*Math.pow(2,note/12), t, step*0.9, wave, 0.35);
+    if(n%2===0) kick(t);
+    if(n%8===0) tone(root/2*Math.pow(2,bassLine[Math.floor(n/8)%4]/12), t, beat*3.5, "sine", 0.6);
+    if(n%2===1) hat(t);
+  }
+  playing = true;
+  clearTimeout(stopTimer);
+  stopTimer = setTimeout(()=>{ stopAudio(); updatePlayUI(); }, dur*1000);
+}
+function tone(f,t,d,type,vol){
+  const o=actx.createOscillator(), g=actx.createGain();
+  o.type=type; o.frequency.value=f;
+  g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(vol,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+d);
+  o.connect(g); g.connect(master); o.start(t); o.stop(t+d+0.05);
+}
+function kick(t){
+  const o=actx.createOscillator(), g=actx.createGain();
+  o.frequency.setValueAtTime(140,t); o.frequency.exponentialRampToValueAtTime(40,t+0.15);
+  g.gain.setValueAtTime(0.9,t); g.gain.exponentialRampToValueAtTime(0.0001,t+0.2);
+  o.connect(g); g.connect(master); o.start(t); o.stop(t+0.22);
+}
+function hat(t){
+  const len=Math.floor(actx.sampleRate*0.04), buf=actx.createBuffer(1,len,actx.sampleRate), d=buf.getChannelData(0);
+  for(let i=0;i<len;i++) d[i]=(Math.random()*2-1)*(1-i/len);
+  const s=actx.createBufferSource(), g=actx.createGain(), hp=actx.createBiquadFilter();
+  hp.type="highpass"; hp.frequency.value=7000; g.gain.value=0.12;
+  s.buffer=buf; s.connect(hp); hp.connect(g); g.connect(master); s.start(t);
+}
+function stopAudio(){
+  playing = false; clearTimeout(stopTimer);
+  if(master){ try{ master.gain.setValueAtTime(0, actx.currentTime); master.disconnect(); }catch(e){} master=null; }
+}
+function updatePlayUI(){
+  const v=document.querySelector(".vinyl"), b=document.querySelector('[data-act="play"]'), dk=document.querySelector(".deck");
+  if(v) v.classList.toggle("spinning", playing);
+  if(dk) dk.classList.toggle("on", playing);
+  if(b) b.textContent = playing ? "■ Zaustavi" : "▶ Pusti isječak";
+}
+
+/* ---------- Prikaz ---------- */
+const app = document.getElementById("app");
+
+function cardHTML(c, cls="", k=null){
+  return `<div class="card ${cls}" style="--c:${colorFor(c.year)}${k!==null?`;--k:${k}`:""}"><span class="yr">${c.year}</span><span class="ti">${esc(c.title)}</span><span class="ar">${esc(c.artist)}</span></div>`;
+}
+function timelineHTML(cards, {selectable=false, slot=null, reveal=null, stagger=false}={}){
+  let h = "";
+  for(let i=0;i<=cards.length;i++){
+    if(selectable){
+      if(slot===i) h += `<div class="card back mystery ${G.justDropped?"dropin":""}" data-drag data-i="${i}" data-focus><span class="q">?</span><span class="hh">Povuci za pomak</span></div>`;
+      else h += `<button class="slot" data-act="slot" data-i="${i}" aria-label="Smjesti na poziciju ${i+1}">+</button>`;
+    }
+    if(reveal && !reveal.ok && reveal.slot===i) h += flipHTML(reveal.card,"fall");
+    if(reveal && !reveal.ok && reveal.ci===i) h += `<div class="ghostwrap">${cardHTML(reveal.card,"wrong")}</div>`;
+    if(i<cards.length){
+      const c = cards[i];
+      if(reveal && reveal.ok && c.id===reveal.card.id) h += `<div data-focus style="display:contents">${reveal.bought?`<div class="dropin" style="flex:none">${cardHTML(c,"new")}</div>`:flipHTML(c,"ok")}</div>`;
+      else h += cardHTML(c, "", stagger ? i : null);
+    }
+  }
+  return `<div class="timeline">${h}</div>`;
+}
+function flipHTML(c, cls){
+  return `<div class="flipwrap ${cls}" ${cls==="fall"?"data-focus":""}><div class="flipper">${cardHTML(c)}${backHTML()}</div></div>`;
+}
+function scoresHTML(){
+  return `<div class="scores">${G.players.map((p,i)=>{
+    let dots=""; for(let k=0;k<MAX_TOKENS;k++) dots += `<i class="${G.tokenPop===i && k===p.tokens-1?"pop":""}">${k<p.tokens?"●":"○"}</i>`;
+    return `<div class="chip ${i===G.turn?"active":""}"><span class="av">${initial(p.name)}</span>
+      <span><b>${esc(p.name)}</b><br><small>${p.cards.length}/${S.target} kartica · <span class="dots" aria-label="${p.tokens} žetona">${dots}</span></small></span></div>`;}).join("")}</div>`;
+}
+const backHTML = (attrs="") => `<div class="card back" ${attrs}><span class="q">?</span><span class="hh">Povuci na crtu</span></div>`;
+function renderSetup(){
+  app.innerHTML = `<main class="wrap">
+    <header class="brand"><h1><span>Spin</span><span>Back</span></h1>
+      <p>Poslušaj pjesmu i smjesti je na svoju vremensku crtu. Tko prvi složi punu crtu, pobjeđuje.</p></header>
+    <section class="panel"><h2>Igrači</h2>
+      ${S.names.map((n,i)=>`<div class="prow"><input data-name="${i}" value="${esc(n)}" placeholder="Igrač ${i+1}" maxlength="16" aria-label="Ime igrača ${i+1}">
+        ${S.names.length>2?`<button class="icon" data-act="rm" data-i="${i}" aria-label="Ukloni igrača">×</button>`:""}</div>`).join("")}
+      ${S.names.length<6?`<button class="ghostbtn" data-act="add">+ Dodaj igrača</button>`:""}
+    </section>
+    <section class="panel"><h2>Kartica za pobjedu</h2>
+      <div class="seg">${[5,7,10].map(n=>`<button data-act="target" data-n="${n}" aria-pressed="${S.target===n}">${n}</button>`).join("")}</div>
+    </section>
+    <button class="primary" data-act="start">Započni igru</button>
+    <details class="rules"><summary>Kako se igra</summary><ol>
+      <li>Svatko počinje s jednom otkrivenom karticom na svojoj vremenskoj crti.</li>
+      <li>Kad si na redu, pusti tajnu pjesmu i dodirni mjesto na crti gdje misliš da pripada.</li>
+      <li>Otkrij godinu. Ako je pjesma na dobrom mjestu, kartica ostaje tvoja. Ako nije, ide van.</li>
+      <li>Ako uz to pogodiš izvođača i naslov, dobivaš žeton. Jedan žeton preskače pjesmu, tri žetona kupuju karticu.</li>
+    </ol></details>
+    <p class="note">Ovo je prototip za jedan uređaj. Umjesto pravog isječka svira generirana melodija, a voditelj može držati gumb da vidi naziv pjesme i otpjevušiti je. U pravoj verziji ovdje dolazi Deezer.</p>
+  </main>`;
+}
+
+function renderHandoff(){
+  const p = cur();
+  app.innerHTML = `<main class="wrap">${scoresHTML()}
+    <div class="center"><p>Predaj uređaj igraču</p><h1 class="handname">${esc(p.name)}</h1>
+    <button class="primary" data-act="ready">Kreni</button></div></main>`;
+}
+
+function renderGame(){
+  const p = cur(), m = G.mystery, rev = S.phase==="reveal", R = G.result;
+  let stage;
+  if(!rev){
+    stage = `<section class="stage">
+      <p class="turn">Na redu je <strong>${esc(p.name)}</strong></p>
+      <div class="deckrow">
+        <div class="deck ${playing?"on":""}"><div class="vinyl ${playing?"spinning":""}" aria-hidden="true"><div class="label">?</div></div><div class="arm" aria-hidden="true"></div></div>
+        <div class="mwrap">${G.slot===null ? backHTML('data-drag aria-label="Tajna pjesma, povuci je na vremensku crtu"') : `<div class="outline">Kartica je na crti</div>`}</div>
+      </div>
+      <div class="controls" style="grid-column:1/-1">
+        <button class="play" data-act="play">${playing?"■ Zaustavi":"▶ Pusti isječak"}</button>
+        <button class="peek" data-peek>Drži za voditelja</button>
+        <div class="peekbox" id="peekbox" hidden><b>${esc(m.title)}</b>${esc(m.artist)}</div>
+      </div>
+      <div class="tokenacts">
+        <button class="secondary" data-act="skip" ${p.tokens<1?"disabled":""}>Preskoči · 1 žeton</button>
+        <button class="secondary" data-act="buy" ${p.tokens<3?"disabled":""}>Kupi karticu · 3 žetona</button>
+      </div></section>`;
+  } else {
+    const [a,b] = R.neighbours||[];
+    let explain = "";
+    if(!R.ok && !R.bought) explain = a&&b ? `Pripada između ${a.year}. i ${b.year}.` : a ? `Pripada nakon ${a.year}.` : `Pripada prije ${b.year}.`;
+    stage = `<section class="stage"><div class="result">
+      <div class="bigyear" data-year="${m.year}">${m.year}</div>
+      <div class="song"><b>${esc(m.title)}</b><span>${esc(m.artist)}</span></div>
+      <div class="verdict ${R.ok?"ok":"no"}">${R.bought?"Kartica kupljena":R.ok?"Točno! Kartica ostaje tvoja.":"Krivo mjesto, kartica ide van."}</div>
+      ${explain?`<p class="explain">${explain}</p>`:""}
+      ${R.bought ? `<div class="next1" style="margin-top:18px"><button class="primary" data-act="next">Dalje</button></div>` :
+        `<p class="ask">Je li ${esc(p.name)} točno rekao/la izvođača i naslov?</p>
+         <div class="askrow"><button class="primary" data-act="title-yes">Da, +1 žeton</button>
+         <button class="secondary" data-act="title-no">Ne</button></div>`}
+    </div></section>`;
+  }
+  const tl = rev
+    ? timelineHTML(p.cards, { reveal:{ ok:R.ok, bought:R.bought, card:m, slot:R.slot, ci:R.ci } })
+    : timelineHTML(p.cards, { selectable:true, slot:G.slot });
+  app.innerHTML = `<main class="wrap">${scoresHTML()}${stage}
+    <section class="line"><h2>Vremenska crta: ${esc(p.name)}</h2>
+      <p class="hint">${rev ? (R.ok?"Nova kartica je označena.":"Iscrtkana kartica pokazuje gdje je pjesma trebala biti.") : "Povuci tajnu karticu na crtu ili dodirni + na željenom mjestu. Crtu možeš listati prstom."}</p>
+      ${tl}</section>
+    ${!rev?`<div class="bar"><div class="inner"><button class="primary" data-act="reveal" ${G.slot===null?"disabled":""}>Otkrij godinu</button></div></div>`:""}
+  </main>`;
+  G.justDropped = false;
+  const f = app.querySelector("[data-focus]");
+  if(f) f.scrollIntoView({inline:"center", block:"nearest", behavior:"smooth"});
+  if(rev) countYear(app.querySelector(".bigyear"), R.bought ? 0 : 900);
+}
+
+function countYear(el, delay){
+  if(!el) return;
+  const target = +el.dataset.year;
+  if(reduceMotion()) return;
+  const from = 1950, dur = 850, t0 = performance.now() + 150;
+  el.textContent = "····";
+  setTimeout(()=>{
+    const start = performance.now();
+    const step = now => {
+      const k = Math.min(1,(now-start)/dur), e = 1-Math.pow(1-k,3);
+      el.textContent = Math.round(from + (target-from)*e);
+      if(k<1) requestAnimationFrame(step); else vibrate(G.result && G.result.ok ? 20 : [30,40,30]);
+    };
+    requestAnimationFrame(step);
+  }, delay ? 250 : 0);
+}
+
+function renderWin(){
+  const w = G.winner;
+  app.innerHTML = `<main class="wrap"><div class="center">
+    <p>${w.cards.length>=S.target?"Puna vremenska crta":"Špil je potrošen"}</p>
+    <h1 class="handname">${esc(w.name)} pobjeđuje!</h1>
+    <div class="winline">${timelineHTML(w.cards,{stagger:true})}</div>
+    <div class="btnrow"><button class="primary" data-act="again">Nova partija</button>
+    <button class="secondary" data-act="setup">Promijeni igrače</button></div>
+  </div></main>`;
+  confetti();
+}
+
+function confetti(){
+  if(reduceMotion()) return;
+  const cv = document.createElement("canvas"); cv.id="confetti"; document.body.appendChild(cv);
+  const ctx = cv.getContext("2d"), dpr = window.devicePixelRatio||1;
+  const W = cv.width = innerWidth*dpr, H = cv.height = innerHeight*dpr;
+  const cols = Object.values(DECADE);
+  const ps = Array.from({length:160},()=>({x:W/2+(Math.random()-.5)*W*.3,y:H*.35,vx:(Math.random()-.5)*16*dpr,vy:(-Math.random()*14-6)*dpr,r:Math.random()*Math.PI,vr:(Math.random()-.5)*.3,w:(6+Math.random()*6)*dpr,h:(10+Math.random()*8)*dpr,c:cols[Math.floor(Math.random()*cols.length)]}));
+  const t0 = performance.now();
+  (function frame(now){
+    ctx.clearRect(0,0,W,H);
+    ps.forEach(p=>{ p.vy += .35*dpr; p.vx *= .99; p.x+=p.vx; p.y+=p.vy; p.r+=p.vr;
+      ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.r); ctx.fillStyle=p.c; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h*Math.abs(Math.cos(p.r*2))); ctx.restore(); });
+    if(now-t0<3200) requestAnimationFrame(frame); else cv.remove();
+  })(t0);
+}
+const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+const vibrate = p => { try{ navigator.vibrate && navigator.vibrate(p); }catch(e){} };
+
+/* Prijelazi između ekrana */
+function go(fn){
+  if(document.startViewTransition && !reduceMotion()) document.startViewTransition(fn);
+  else fn();
+}
+
+/* ---------- Povlačenje kartice ---------- */
+let drag = null;
+document.addEventListener("pointerdown", e=>{
+  const el = e.target.closest("[data-drag]");
+  if(!el || S.phase!=="listen" || (e.button!==undefined && e.button!==0)) return;
+  e.preventDefault();
+  const r = el.getBoundingClientRect();
+  drag = { el, id:e.pointerId, sx:e.clientX, sy:e.clientY, x:e.clientX, y:e.clientY, lx:e.clientX, offX:e.clientX-r.left, offY:e.clientY-r.top, rect:r, moved:false, ghost:null, hot:null, tilt:0 };
+  try{ el.setPointerCapture(e.pointerId); }catch(_){}
+});
+document.addEventListener("pointermove", e=>{
+  if(!drag || e.pointerId!==drag.id) return;
+  if(!drag.moved){
+    if(Math.hypot(e.clientX-drag.sx, e.clientY-drag.sy) < 6) return;
+    startDrag();
+  }
+  e.preventDefault();
+  drag.x = e.clientX; drag.y = e.clientY;
+  moveGhost(); findHot();
+});
+function startDrag(){
+  drag.moved = true;
+  const g = drag.el.cloneNode(true);
+  g.removeAttribute("data-drag"); g.removeAttribute("data-focus");
+  g.classList.remove("dropin","mystery"); g.classList.add("dragghost");
+  g.style.width = drag.rect.width+"px"; g.style.animation = "none";
+  document.body.appendChild(g);
+  drag.ghost = g;
+  drag.el.classList.add("lifted");
+  document.body.classList.add("dragging");
+  vibrate(10);
+  requestAnimationFrame(autoScroll);
+}
+function moveGhost(){
+  const v = drag.x - drag.lx; drag.lx = drag.x;
+  drag.tilt = drag.tilt*0.8 + Math.max(-14, Math.min(14, v*1.2))*0.2;
+  drag.ghost.style.transform = `translate(${drag.x-drag.offX}px, ${drag.y-drag.offY}px) rotate(${drag.tilt}deg) scale(1.06)`;
+}
+function findHot(){
+  const tl = document.querySelector(".timeline"); if(!tl) return;
+  const tr = tl.getBoundingClientRect();
+  let best = null;
+  if(drag.y > tr.top-110 && drag.y < tr.bottom+70){
+    let bd = Infinity;
+    tl.querySelectorAll(".slot, [data-drag]").forEach(s=>{
+      const r = s.getBoundingClientRect(), d = Math.abs(r.left + r.width/2 - drag.x);
+      if(d < bd){ bd = d; best = s; }
+    });
+  }
+  if(best !== drag.hot){
+    if(drag.hot && drag.hot.classList) drag.hot.classList.remove("hot");
+    if(best && best.classList.contains("slot")) best.classList.add("hot");
+    if(best) vibrate(5);
+    drag.hot = best;
+  }
+}
+function autoScroll(){
+  if(!drag || !drag.moved) return;
+  const tl = document.querySelector(".timeline");
+  if(tl){
+    const tr = tl.getBoundingClientRect();
+    if(drag.y > tr.top-110 && drag.y < tr.bottom+70){
+      const edge = 60;
+      if(drag.x < tr.left+edge) tl.scrollLeft -= 10;
+      else if(drag.x > tr.right-edge) tl.scrollLeft += 10;
+    }
+    findHot();
+  }
+  requestAnimationFrame(autoScroll);
+}
+function endDrag(e){
+  if(!drag || (e && e.pointerId!==drag.id)) return;
+  const d = drag; drag = null;
+  document.body.classList.remove("dragging");
+  if(!d.moved) return;
+  if(d.hot){
+    d.ghost.remove();
+    G.slot = +d.hot.dataset.i; G.justDropped = true;
+    vibrate(15);
+    render();
+  } else {
+    d.ghost.style.transition = "transform .38s cubic-bezier(.3,1.3,.5,1)";
+    d.ghost.style.transform = `translate(${d.rect.left}px, ${d.rect.top}px) rotate(0deg) scale(1)`;
+    setTimeout(()=>{ d.ghost.remove(); d.el.classList.remove("lifted"); }, 380);
+  }
+}
+document.addEventListener("pointerup", endDrag);
+document.addEventListener("pointercancel", endDrag);
+
+function render(){
+  ({setup:renderSetup, handoff:renderHandoff, listen:renderGame, reveal:renderGame, win:renderWin})[S.phase]();
+}
+
+/* ---------- Događaji ---------- */
+document.addEventListener("input", e=>{
+  const i = e.target.dataset.name; if(i!==undefined) S.names[+i] = e.target.value;
+});
+document.addEventListener("click", e=>{
+  const b = e.target.closest("[data-act]"); if(!b || b.disabled) return;
+  const a = b.dataset.act;
+  if(a==="add"){ S.names.push(""); render(); app.querySelectorAll("input")[S.names.length-1]?.focus(); }
+  else if(a==="rm"){ S.names.splice(+b.dataset.i,1); render(); }
+  else if(a==="target"){ S.target = +b.dataset.n; render(); }
+  else if(a==="start" || a==="again"){ startGame(); }
+  else if(a==="setup"){ stopAudio(); S.phase="setup"; go(render); }
+  else if(a==="ready"){ S.phase="listen"; go(render); }
+  else if(a==="play"){ if(playing) stopAudio(); else playSong(G.mystery); updatePlayUI(); }
+  else if(a==="slot"){ G.slot = +b.dataset.i; G.justDropped = true; vibrate(15); render(); }
+  else if(a==="unplace"){ G.slot = null; render(); }
+  else if(a==="reveal"){ if(G.slot!==null) reveal(); }
+  else if(a==="skip"){ skipSong(); }
+  else if(a==="buy"){ buyCard(); }
+  else if(a==="title-yes"){ finishTurn(true); }
+  else if(a==="title-no" || a==="next"){ finishTurn(false); }
+});
+const showPeek = v => { const p=document.getElementById("peekbox"); if(p) p.hidden=!v; };
+document.addEventListener("pointerdown", e=>{ if(e.target.closest("[data-peek]")){ e.preventDefault(); showPeek(true); } });
+["pointerup","pointercancel"].forEach(t=>document.addEventListener(t, ()=>showPeek(false)));
+document.addEventListener("pointerout", e=>{ if(e.target.closest && e.target.closest("[data-peek]")) showPeek(false); });
+document.addEventListener("keydown", e=>{ if(e.target.closest && e.target.closest("[data-peek]") && (e.key===" "||e.key==="Enter")){ e.preventDefault(); showPeek(true); } });
+document.addEventListener("keyup", e=>{ if(e.target.closest && e.target.closest("[data-peek]")) showPeek(false); });
+
+render();
+</script>
+</body>
+</html>

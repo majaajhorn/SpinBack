@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "@fontsource-variable/unbounded";
+@import "@fontsource-variable/instrument-sans";
+@import "./tokens.css";
+
+/* `inline` so utilities reference the runtime vars and follow the light/dark switch. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-pink: var(--pink);
+  --color-amber: var(--amber);
+  --color-teal: var(--teal);
+  --color-bad: var(--bad);
+  --color-vinyl: var(--vinyl);
+  --color-groove: var(--groove);
+  --color-on-accent: var(--on-accent);
+  --color-d-1950: var(--d-1950);
+  --color-d-1960: var(--d-1960);
+  --color-d-1970: var(--d-1970);
+  --color-d-1980: var(--d-1980);
+  --color-d-1990: var(--d-1990);
+  --color-d-2000: var(--d-2000);
+  --color-d-2010: var(--d-2010);
+  --color-d-2020: var(--d-2020);
+}
+
+/* Plain @theme emits these as CSS vars, so base styles below can use them. */
+@theme {
+  --font-display: "Unbounded Variable", "Arial Black", system-ui, sans-serif;
+  --font-body: "Instrument Sans Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+  }
+  h1, h2 {
+    font-family: var(--font-display);
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+  :focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 2px;
+  }
+}

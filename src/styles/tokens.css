@@ -1,0 +1,26 @@
+/* Design tokens, ported 1:1 from prototype/index.html. */
+:root {
+  --bg: #E4EDE8; --surface: #F8FBF9; --ink: #18233D; --muted: #55627A; --line: #C5D2CC;
+  --pink: #D23C70; --amber: #EFAB30; --teal: #1B7C7D; --bad: #C2364A;
+  --vinyl: #1A1F2C; --groove: #2C3344; --on-accent: #FFFFFF;
+  /* Decade colours are the same in both themes (white text sits on them). */
+  --d-1950: #5E8F80; --d-1960: #C9922A; --d-1970: #C8642F; --d-1980: #C93468;
+  --d-1990: #6E52C8; --d-2000: #2A7FBF; --d-2010: #178C80; --d-2020: #6F8A22;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101928; --surface: #19243A; --ink: #EDF1F7; --muted: #A1ADC3; --line: #2D3A55;
+    --pink: #EE6293; --amber: #F4BD55; --teal: #3CB1AE; --bad: #F0697A;
+    --vinyl: #05070C; --groove: #1C2232; --on-accent: #101928;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #101928; --surface: #19243A; --ink: #EDF1F7; --muted: #A1ADC3; --line: #2D3A55;
+  --pink: #EE6293; --amber: #F4BD55; --teal: #3CB1AE; --bad: #F0697A;
+  --vinyl: #05070C; --groove: #1C2232; --on-accent: #101928;
+  color-scheme: dark;
+}
